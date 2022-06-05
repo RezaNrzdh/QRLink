@@ -9,3 +9,7 @@ export const DesktopHeader = styled.header`
     box-shadow: ${Elevation.huge};
     z-index: 999;
 `;
+
+export const Auth = styled.div`
+    
+`;

@@ -2,6 +2,10 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     display: flex;
+    flex-direction: ${ props => props.column ? 'column' : null };
+    justify-content: ${ props => props.center ? 'center' : null };
+    justify-content: ${ props => props.between ? 'space-between' : null };
+    align-items: ${ props => props.middle ? 'center' : null };
     position: relative;
     width: 1280px;
     height: inherit;

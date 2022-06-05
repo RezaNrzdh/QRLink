@@ -1,12 +1,12 @@
 import Container from 'hoc/container';
 import * as S from './header.styled';
+import {Navigation} from 'components/index';
 
 export const DesktopHeader = () => {
     return(
         <S.DesktopHeader>
-            <Container>
-                <button>Home</button>
-                <button>Pricing</button>
+            <Container middle>
+                <Navigation />
             </Container>
         </S.DesktopHeader>
     );

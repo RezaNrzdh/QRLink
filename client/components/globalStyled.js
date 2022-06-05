@@ -19,6 +19,11 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
 
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+
     @font-face {
         font-family: VazirMatnFont;
         src: url('./fonts/Vazirmatn-UI-FD-Light.ttf') format('ttf');
