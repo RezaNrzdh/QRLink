@@ -1,7 +1,9 @@
+import * as S from './button.styled';
 
-
-export const Button = ({color = 'primary',variant = 'contained'}) => {
+export const Button = (props) => {
     return(
-        
+        <S.Wrapper variant={props.variant} color={props.color}>
+            { props.children }
+        </S.Wrapper>  
     );
 }
