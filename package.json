@@ -1,0 +1,19 @@
+{
+  "name": "qrlink",
+  "version": "1.0.0",
+  "description": "This project is about unique links for every user. They can create their page and show their products and services.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RezaNrzdh/QRLink.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RezaNrzdh/QRLink/issues"
+  },
+  "homepage": "https://github.com/RezaNrzdh/QRLink#readme"
+}
