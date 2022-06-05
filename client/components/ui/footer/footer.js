@@ -4,4 +4,11 @@ export const DesktopFooter = () => {
             
         </>
     );
-}s
+}
+
+export const MobileFooter = () => {
+    return(
+        <>
+        </>
+    );
+}
