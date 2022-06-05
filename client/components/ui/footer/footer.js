@@ -1,7 +1,7 @@
 export const DesktopFooter = () => {
     return(
         <>
-            
+            desktop footer
         </>
     );
 }
@@ -9,6 +9,7 @@ export const DesktopFooter = () => {
 export const MobileFooter = () => {
     return(
         <>
+            mobile footer
         </>
     );
 }

@@ -1,5 +1,5 @@
 // Utils
 
 // Components
-export * from 'components/ui/header';
-export * from 'components/ui/footer';
+export * from 'components/ui/header/header';
+export * from 'components/ui/header/header';

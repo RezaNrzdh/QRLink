@@ -1,16 +1,10 @@
 const UserAgent = () => {
     const useragent = navigator.userAgent;
-    if(useragent.indexOf("Android") != -1){
-        return 'Mobile'
-    }
-    else if(useragent.indexOf("iPhone") != -1){
-        return 'Mobile'
-    }
-    else if(useragent.indexOf("iPad") != -1){
+    if(useragent.match("/Android|iPhone|iPad/") != null){
         return 'Mobile'
     }
     else {
-        return 'Windows'
+        return 'Desktop'
     }
 }
 
