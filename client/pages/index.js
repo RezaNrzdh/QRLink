@@ -9,7 +9,7 @@ const IndexPage = () => {
     useEffect(() => {
         console.log(navigator.userAgent);
         setDevice(UserAgent());
-    });
+    },[]);
 
     return (
         <>
