@@ -5,10 +5,11 @@ import {DesktopLayout, MobileLayout} from 'components/layouts/layout'
 
 const IndexPage = () => {
 
-    const [device, setDevice] = useState(null);
+    const [device, setDevice] = useState('Desktop');
 
     useEffect(() => {
         setDevice(UserAgent());
+        console.log(UserAgent());
     },[]);
 
     return (
