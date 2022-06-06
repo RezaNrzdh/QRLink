@@ -1,23 +1,18 @@
+import {useContext} from 'react';
 import Link from 'next/link';
-import {UserAgent} from 'lib/useragent';
-import { useEffect, useState } from 'react';
 import Container from 'hoc/container';
 import Layout from 'components/layouts';
+import {deviceContext} from 'context/isMobile';
 
 const IndexPage = () => {
 
-    const [device, setDevice] = useState('Desktop');
-
-    useEffect(() => {
-        setDevice(UserAgent());
-        console.log(UserAgent());
-    },[]);
+    const {isMobile} = useContext(deviceContext);
 
     return (
         <Layout>
             <Container>
                 <h1>Home Page</h1>
-                <p>Lorem ipsum dolor esmit, device detected is {device}</p>
+                <p>Lorem ipsum dolor esmit, device detected is</p>
                 <Link href='about'><button>Go to about page</button></Link>
                 <Link href='contact'><button>Go to contact page</button></Link>   
             </Container>
