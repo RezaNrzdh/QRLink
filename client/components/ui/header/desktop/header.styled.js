@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Elevation} from 'components/index';
 import { Color } from 'components/utils/color';
 
-export const DesktopHeader = styled.header`
+export const Header = styled.header`
     display: flex;
     position: relative;
     width: 100%;

@@ -5,6 +5,7 @@ export * from 'components/utils/typography';
 
 // Components
 export * from 'components/ui/logo/logo';
-export * from 'components/ui/header/header';
-export * from 'components/ui/footer/footer';
+export * from 'components/ui/header/desktop/header';
+export * from 'components/ui/footer/desktop/footer';
 export * from 'components/ui/navigation/navigation';
+export * from 'components/ui/button/button';

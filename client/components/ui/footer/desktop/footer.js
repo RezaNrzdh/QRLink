@@ -6,10 +6,3 @@ export const DesktopFooter = () => {
     );
 }
 
-export const MobileFooter = () => {
-    return(
-        <>
-            mobile footer
-        </>
-    );
-}
