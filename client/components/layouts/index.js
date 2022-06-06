@@ -1,10 +1,13 @@
-import { UserAgent } from "lib/useragent";
+import {useContext} from 'react';
 import { DesktopLayout } from "./desktop/layout";
 import { MobileLayout } from "./mobile/layout";
+import {deviceContext} from 'context/isMobile';
 
 const Layout = () => {
-    console.log(UserAgent());
-    return UserAgent() === 'Mobile' 
+
+    const{isMobile} = useContext(deviceContext);
+
+    return isMobile === true 
         ? <MobileLayout /> 
         : <DesktopLayout />;
 }
