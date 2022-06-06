@@ -1,6 +1,7 @@
 // Utils
-export * from 'components/utils/Elevation';
+export * from 'components/utils/elevation';
 export * from 'components/utils/color';
+export * from 'components/utils/typography';
 
 // Components
 export * from 'components/ui/logo/logo';

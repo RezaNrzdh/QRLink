@@ -1,8 +1,9 @@
 import { Color } from 'components/utils/color';
+import { Typography } from 'components/utils/typography';
 import styled, {css} from 'styled-components';
 
-const Button = (props) => {
-    switch(props.colors){
+const Button = ({colors = 'dark'}) => {
+    switch(colors){
         case 'primary': return PrimaryButton;
         case 'success': return SuccessButton;
         case 'dark': return DarkButton;
@@ -14,6 +15,10 @@ const PrimaryButton = (props) => {
         background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.primary.main : null };
         border: ${ props.variant == 'outlined' ? `1px solid ${Color.primary.main}` : null };
         color: ${Color.text.main};
+        &:hover{
+            background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.text.main : null };
+            color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.text.contrast : null };;
+        }
     `;
 }
 
@@ -30,6 +35,9 @@ const DarkButton = (props) => {
         background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.action.outlined : null };
         border: ${ props.variant == 'outlined' ? `1px solid ${Color.action.outlined}` : null };
         color: ${props.variant != 'contained' ? Color.text.main : Color.text.contrast };
+        &:hover{
+            background-color: ${ props.variant != 'contained' ? Color.action.hover : null };
+        }        
     `;
 }
 
@@ -39,5 +47,7 @@ export const Wrapper = styled.a`
     padding: 0 24px;
     height: 40px;
     border-radius: 20px;
+    ${Typography.Body2}
+    transition: all ease-in-out 0.3s;
     ${Button}
 `;

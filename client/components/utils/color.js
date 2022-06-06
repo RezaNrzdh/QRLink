@@ -25,7 +25,8 @@ const Color = {
         light: '#EAEAEA'
     },
     action: {
-        outlined: '#23425f'
+        outlined: '#23425f',
+        hover: '#EAEAEA'
     },
     success: {
         main: '#35D0BA',

@@ -1,53 +1,67 @@
 import styled, {css} from 'styled-components';
 
-export const Headline1 = css`
+const Headline1 = css`
     font-size: 2.5rem;
     font-weight: 700;
 `;
 
-export const Headline2 = css`
+const Headline2 = css`
     font-size: 2rem;
     font-weight: 700;
 `;
 
-export const Headline3 = css`
+const Headline3 = css`
     font-size: 1.75rem;
     font-weight: 700;
 `;
 
-export const Headline4 = css`
+const Headline4 = css`
     font-size: 1.5rem;
     font-weight: 700;
 `;
 
-export const Headline5 = css`
+const Headline5 = css`
     font-size: 1.25rem;
     font-weight: 700;
 `;
 
-export const Headline6 = css`
+const Headline6 = css`
     font-size: 1.125rem;
     font-weight: 700;
 `;
 
-export const Subtitle1 = css`
+const Subtitle1 = css`
     font-size: 1rem;
     font-weight: 700;
 `;
 
-export const Subtitle2 = css`
+const Subtitle2 = css`
     font-size: 0.875rem;
     font-weight: 700;
 `;
 
-export const Body1 = css`
+const Body1 = css`
     font-size: 1rem;
 `;
 
-export const Body2 = css`
+const Body2 = css`
     font-size: 0.875rem;
 `;
 
-export const Caption = css`
+const Caption = css`
     font-size: 0.75rem;
 `;
+
+export const Typography = {
+    Headline1: Headline1,
+    Headline2: Headline2,
+    Headline3: Headline3,
+    Headline4: Headline4,
+    Headline5: Headline5,
+    Headline6: Headline6,
+    Subtitle1: Subtitle1,
+    Subtitle2: Subtitle2,
+    Body1: Body1,
+    Body2: Body2,
+    Caption: Caption
+}

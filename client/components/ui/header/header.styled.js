@@ -23,4 +23,7 @@ export const DesktopHeader = styled.header`
 export const Auth = styled.div`
     display: flex;
     margin-right: auto;
+    a{
+        margin-left: 16px;
+    }
 `;
