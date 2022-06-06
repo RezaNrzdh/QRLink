@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Container from 'hoc/container';
 import * as S from './header.styled';
 import {Navigation, Logo} from 'components/index';
@@ -10,7 +11,7 @@ export const DesktopHeader = () => {
                 <Logo />
                 <Navigation />
                 <S.Auth>
-                    <Button variant='text'>ورود</Button>
+                    <Button href='profile' variant='text'>ورود</Button>
                     <Button variant='contained' colors='primary'>عضویت</Button>
                 </S.Auth>
             </Container>
