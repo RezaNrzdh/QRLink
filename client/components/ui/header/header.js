@@ -8,7 +8,7 @@ export const DesktopHeader = () => {
         <S.DesktopHeader>
             <Container middle>
                 <Navigation />
-                <Button variant='contained' color='primary'>عضویت</Button>
+                <Button variant='contained' colors='primary'>عضویت</Button>
             </Container>
         </S.DesktopHeader>
     );
