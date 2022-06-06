@@ -9,13 +9,18 @@ export const DesktopHeader = styled.header`
     height: 80px;
     box-shadow: ${Elevation.huge};
     z-index: 999;
-    svg{
-        width: 150px;
+    .logo{
+        display: flex;
+        width: 160px;
         height: 30px;
-        fill: ${Color.primary.main}
+        svg{
+
+            fill: ${Color.primary.main}
+        }
     }
 `;
 
 export const Auth = styled.div`
-    
+    display: flex;
+    margin-right: auto;
 `;

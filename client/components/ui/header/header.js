@@ -9,7 +9,10 @@ export const DesktopHeader = () => {
             <Container middle>
                 <Logo />
                 <Navigation />
-                <Button variant='contained' colors='primary'>عضویت</Button>
+                <S.Auth>
+                    <Button variant='text' colors='primary'>ورود</Button>
+                    <Button variant='contained' colors='primary'>عضویت</Button>
+                </S.Auth>
             </Container>
         </S.DesktopHeader>
     );
