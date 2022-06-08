@@ -3,11 +3,11 @@ import { Color } from "components/utils/color";
 export const DesktopFooter = () => {
     return(
         <>
-            <p>
+            <div>
                 DESKTOP FOOTER
-            </p>
+            </div>
             <style jsx>{`
-                p {
+                div {
                     display: flex;
                     justify-content: center;
                     width: 100%;

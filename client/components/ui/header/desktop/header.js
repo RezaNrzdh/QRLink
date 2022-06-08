@@ -11,7 +11,7 @@ export const DesktopHeader = () => {
                 <Logo />
                 <Navigation />
                 <S.Auth>
-                    <Button href='/auth/login' variant='text' colors='dark'>عضویت</Button>
+                    <Button href='/auth/login' variant='text' colors='dark'>ورود</Button>
                     <Button variant='contained' colors='primary'>عضویت</Button>
                 </S.Auth>
             </Container>

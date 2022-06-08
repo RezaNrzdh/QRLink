@@ -6,6 +6,7 @@ export * from 'components/utils/typography';
 // Overall
 export * from 'components/ui/logo/logo';
 export * from 'components/ui/button/button';
+export * from 'components/ui/textfield/textfield';
 
 // Desktop
 export * from 'components/ui/header/desktop/header';

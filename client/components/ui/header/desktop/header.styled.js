@@ -24,7 +24,7 @@ export const Header = styled.header`
 export const Auth = styled.div`
     display: flex;
     margin-right: auto;
-    a{
+    a:first-child{
         margin-left: 16px;
     }
 `;
