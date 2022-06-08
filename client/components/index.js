@@ -3,9 +3,11 @@ export * from 'components/utils/elevation';
 export * from 'components/utils/color';
 export * from 'components/utils/typography';
 
-// Components
+// Overall
 export * from 'components/ui/logo/logo';
+export * from 'components/ui/button/button';
+
+// Desktop
 export * from 'components/ui/header/desktop/header';
 export * from 'components/ui/footer/desktop/footer';
-export * from 'components/ui/navigation/navigation';
-export * from 'components/ui/button/button';
+export * from 'components/ui/navigation/desktop/navigation';
