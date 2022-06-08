@@ -26,56 +26,56 @@ export const GlobalStyle = createGlobalStyle`
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Light.ttf') format('ttf');
+        src: url('/fonts/Vazirmatn-UI-FD-Light.ttf') format('ttf');
         font-weight: 300;
         font-style: normal;        
     }
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Light.woff2') format('woff2');
+        src: url('/fonts/Vazirmatn-UI-FD-Light.woff2') format('woff2');
         font-weight: 300;
         font-style: normal;        
     }
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Regular.ttf') format('ttf');
+        src: url('/fonts/Vazirmatn-UI-FD-Regular.ttf') format('ttf');
         font-weight: 400;
         font-style: normal;        
     }
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Regular.woff2') format('woff2');
+        src: url('/fonts/Vazirmatn-UI-FD-Regular.woff2') format('woff2');
         font-weight: 400;
         font-style: normal;        
     }    
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Medium.ttf') format('ttf');
+        src: url('/fonts/Vazirmatn-UI-FD-Medium.ttf') format('ttf');
         font-weight: 500;
         font-style: normal;        
     }
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Medium.woff2') format('woff2');
+        src: url('/fonts/Vazirmatn-UI-FD-Medium.woff2') format('woff2');
         font-weight: 500;
         font-style: normal;        
     }
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Bold.ttf') format('ttf');
+        src: url('/fonts/Vazirmatn-UI-FD-Bold.ttf') format('ttf');
         font-weight: 700;
         font-style: normal;        
     }
 
     @font-face {
         font-family: VazirMatnFont;
-        src: url('./fonts/Vazirmatn-UI-FD-Bold.woff2') format('woff2');
+        src: url('/fonts/Vazirmatn-UI-FD-Bold.woff2') format('woff2');
         font-weight: 700;
         font-style: normal;        
     } 

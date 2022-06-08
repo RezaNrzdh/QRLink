@@ -13,6 +13,7 @@ export const Header = styled.header`
         display: flex;
         width: 160px;
         height: 30px;
+        cursor: pointer;
         svg{
 
             fill: ${Color.primary.main}
