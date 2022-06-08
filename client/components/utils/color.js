@@ -44,9 +44,9 @@ const Color = {
         light: ''
     },
     info: {
-        main: '',
-        dark: '',
-        light: ''
+        main: '#2F89FC',
+        dark: '#2363B5',
+        light: '#9ED6FF'
     },
     icon: {
         main: '',
