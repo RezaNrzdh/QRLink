@@ -27,9 +27,11 @@ export const Title = styled.div`
     h1{
         color: ${Color.text.main};
         ${Typography.Headline6};
+        margin-bottom: 8px;
     }
     label{
         color: ${Color.text.main};
+        ${Typography.Body2};
     }
 `;
 

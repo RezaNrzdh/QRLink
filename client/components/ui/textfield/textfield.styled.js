@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export const TextfieldContainer = styled.div`
     display: flex;
     flex-direction: column;
+    margin-bottom: 24px;
 `;
 
 export const Label = styled.label`
@@ -16,6 +17,7 @@ export const Label = styled.label`
 
 export const Textfield = styled.div`
     display: flex;
+    overflow: hidden;
     width: ${ props => props.width ? `${props.width}px` : null };
     height: 40px;
     border: 1px solid ${Color.stroke.main};

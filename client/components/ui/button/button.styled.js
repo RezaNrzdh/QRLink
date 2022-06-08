@@ -43,8 +43,11 @@ const DarkButton = (props) => {
 
 export const Wrapper = styled.a`
     display: flex;
+    justify-content: center;
     align-items: center;
+    box-sizing: border-box;
     padding: 0 24px;
+    width: ${ props => props.width ? `${props.width}px` : null};
     height: 40px;
     border-radius: 20px;
     ${Typography.Body2}
