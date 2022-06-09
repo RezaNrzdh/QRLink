@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
         font-family: VazirMatnFont;
     }
 
+    #__next{
+        height: 100%;
+    }
+
     a, button {
         cursor: pointer;
         outline: none;

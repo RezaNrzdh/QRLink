@@ -7,7 +7,7 @@ export const Header = styled.header`
     position: relative;
     width: 100%;
     height: 80px;
-    box-shadow: ${Elevation.huge};
+    box-shadow: ${Elevation.header};
     z-index: 999;
     .logo{
         display: flex;
@@ -15,7 +15,6 @@ export const Header = styled.header`
         height: 30px;
         cursor: pointer;
         svg{
-
             fill: ${Color.primary.main}
         }
     }
