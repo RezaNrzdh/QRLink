@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import { Color } from "./utils/color";
 
 export const GlobalStyle = createGlobalStyle`
     body, html {
@@ -13,6 +14,13 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
         outline: none;
         text-decoration: none;
+    }
+
+    .link {
+        color: ${Color.action.link};
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     h1, h2, h3, h4 {

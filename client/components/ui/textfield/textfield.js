@@ -1,8 +1,14 @@
 import * as S from './textfield.styled';
 
-export const Textfield = ({width, label, placeholder, type}) => {
+export const Textfield = ({
+    width,
+    label,
+    placeholder,
+    type,
+    marginbottom = 24
+}) => {
     return(
-        <S.TextfieldContainer>
+        <S.TextfieldContainer marginbottom={marginbottom}>
             <S.Label>
                 {label}
             </S.Label>

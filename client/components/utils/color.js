@@ -26,7 +26,8 @@ const Color = {
     },
     action: {
         outlined: '#23425f',
-        hover: '#EAEAEA'
+        hover: '#EAEAEA',
+        link: '#2F89FC'
     },
     success: {
         main: '#35D0BA',

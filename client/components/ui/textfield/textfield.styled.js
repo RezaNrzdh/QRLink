@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const TextfieldContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
+    margin-bottom: ${ props => `${props.marginbottom}px`};
 `;
 
 export const Label = styled.label`

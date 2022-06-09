@@ -17,6 +17,18 @@ export const FormWrapper = styled.section`
     flex-direction: column;
     width: 50%;
     height: 100vh;
+    padding-left: 20%;
+    box-sizing: border-box;
+
+    @media (max-width: 1280px) {
+        padding-left: 18%;
+    }
+    @media (max-width: 1194px) {
+        padding-left: 13%;
+    }
+    @media (max-width: 1024px) {
+        padding-left: 10%;
+    }
 `;
 
 export const Title = styled.div`
@@ -32,6 +44,15 @@ export const Title = styled.div`
     label{
         color: ${Color.text.main};
         ${Typography.Body2};
+    }
+`;
+
+export const ForgetPassword = styled.div`
+    display: flex;
+    margin-bottom: 24px;
+    .link{
+        margin-right: auto;
+        ${Typography.Caption};
     }
 `;
 
