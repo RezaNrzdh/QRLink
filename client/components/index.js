@@ -2,6 +2,7 @@
 export * from 'components/utils/elevation';
 export * from 'components/utils/color';
 export * from 'components/utils/typography';
+export * from 'components/utils/icon';
 
 // Overall
 export * from 'components/ui/logo/logo';

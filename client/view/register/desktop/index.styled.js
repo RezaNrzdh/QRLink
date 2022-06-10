@@ -51,10 +51,6 @@ export const ForgetPassword = styled.div`
     label{
         ${Typography.Body2};
     }
-    .link{
-        margin-right: auto;
-        ${Typography.Caption};
-    }
 `;
 
 export const DoNotRegisterYet = styled.div`

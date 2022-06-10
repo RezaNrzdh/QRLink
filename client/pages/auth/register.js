@@ -1,10 +1,14 @@
 import {useContext} from 'react';
 import {deviceContext} from 'context/isMobile';
-import {LoginPageDesktop, LoginPageMobile} from 'view/login/index';
+import {RegisterPageDesktop, RegisterPageMobile} from 'view/register/index';
 
 const RegisterPage = () => {
 
-    return (<p>dsada</p>);
+    const{isMobile} = useContext(deviceContext);
+
+    return isMobile === true
+        ? <RegisterPageMobile />
+        : <RegisterPageDesktop />;
 }
 
 export default RegisterPage;
