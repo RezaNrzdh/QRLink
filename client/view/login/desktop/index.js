@@ -22,7 +22,7 @@ export const LoginPageDesktop = () => {
                     <Button variant='contained' colors='primary'>ورود به پنل کاربری</Button>
                     <S.DoNotRegisterYet>
                         <label>هنوز ثبت نام نکردی؟</label>
-                        <Link href='#'><a className='link'>همین حالا عضو شو</a></Link>
+                        <Link href='/auth/register'><a className='link'>همین حالا عضو شو</a></Link>
                     </S.DoNotRegisterYet>
                 </S.FormWrapper>
                 <S.HeroWrapper>

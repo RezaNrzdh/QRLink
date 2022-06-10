@@ -22,7 +22,7 @@ export const RegisterPageDesktop = () => {
                     <Button variant='contained' colors='primary'>ثبت نام در سایت</Button>
                     <S.DoNotRegisterYet>
                         <label>قبلا عضو شدی؟</label>
-                        <Link href='#'><a className='link'>همین حالا وارد شو</a></Link>
+                        <Link href='/auth/login'><a className='link'>همین حالا وارد شو</a></Link>
                     </S.DoNotRegisterYet>
                 </S.FormWrapper>
                 <S.HeroWrapper>
