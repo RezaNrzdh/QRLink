@@ -1,5 +1,5 @@
 export const LoginPageMobile = () => {
     return(
-        <p>mobile</p>
+        <p>mobileddddd</p>
     );
 }

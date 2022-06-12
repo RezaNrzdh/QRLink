@@ -5,7 +5,7 @@ export const deviceContext = createContext();
 
 const DeviceProvider = (props) => {
 
-    const [isMobile, setIsMobile] = useState(true);
+    const [isMobile, setIsMobile] = useState();
 
     useEffect(() => {
         setIsMobile(UserAgent());
