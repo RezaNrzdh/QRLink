@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const profileSchema = new mongoose.Schema({
+const UsersSchema = new mongoose.Schema({
     mobile: {
         type: Number,
         required: true,
@@ -8,7 +8,6 @@ const profileSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required: true,
         minlength: 4
     },
     email: {
@@ -18,7 +17,7 @@ const profileSchema = new mongoose.Schema({
     otp: {
         type: Number
     },
-    otpExpried: {
+    otpExpired: {
         type: Number
     },
     attempt: {
@@ -39,6 +38,4 @@ const profileSchema = new mongoose.Schema({
     }
 });
 
-const Profile = mongoose.model('Profile', profileSchema);
-
-module.exports = Profile;
+export default mongoose.models.Users || mongoose.model('Users', UsersSchema);

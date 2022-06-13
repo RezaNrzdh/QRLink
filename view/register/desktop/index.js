@@ -19,12 +19,6 @@ export const RegisterPageDesktop = (props) => {
                             type='tel'
                             id='phone'
                             name='phone'/>
-                        <Textfield 
-                            label='رمز عبور' 
-                            marginbottom={16} 
-                            type='password'
-                            id='password'
-                            name='password'/>
                         <S.ForgetPassword>
                             <input 
                                 type={'checkbox'}
