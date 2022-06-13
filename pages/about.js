@@ -6,15 +6,6 @@ import Axios from 'axios';
 
 const AboutPage = () => {
 
-    useEffect(() => {
-        getResponce();
-    },[]);
-
-    const getResponce = async () => {
-        const d = await Axios.post('api/test');
-        console.log(d);
-    }
-
     return(
         <Layout>
             <Container>

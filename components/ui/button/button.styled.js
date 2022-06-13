@@ -13,7 +13,7 @@ const Button = ({colors = 'dark'}) => {
 const PrimaryButton = (props) => {
     return css`
         background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.primary.main : null };
-        border: ${ props.variant == 'outlined' ? `1px solid ${Color.primary.main}` : null };
+        border: ${ props.variant == 'outlined' ? `1px solid ${Color.primary.main}` : 'none' };
         color: ${Color.text.main};
         &:hover{
             background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.text.main : null };
@@ -25,7 +25,7 @@ const PrimaryButton = (props) => {
 const SuccessButton = (props) => {
     return css`
         background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.success.main : null };
-        border: ${ props.variant == 'outlined' ? `1px solid ${Color.primary.main}` : null };
+        border: ${ props.variant == 'outlined' ? `1px solid ${Color.primary.main}` : 'none' };
         color: ${Color.text.main};
     `;
 }
@@ -33,7 +33,7 @@ const SuccessButton = (props) => {
 const DarkButton = (props) => {
     return css`
         background-color: ${ (props.variant != 'text' && props.variant != 'outlined') ? Color.action.outlined : null };
-        border: ${ props.variant == 'outlined' ? `1px solid ${Color.action.outlined}` : null };
+        border: ${ props.variant == 'outlined' ? `1px solid ${Color.action.outlined}` : 'none' };
         color: ${props.variant != 'contained' ? Color.text.main : Color.text.contrast };
         &:hover{
             background-color: ${ props.variant != 'contained' ? Color.action.hover : null };
@@ -47,9 +47,10 @@ export const Wrapper = styled.a`
     align-items: center;
     box-sizing: border-box;
     padding: 0 24px;
-    width: ${ props => props.width ? `${props.width}px` : null};
+    width: ${ props => props.width ? `${props.width}px` : '100%'};
     height: 40px;
     border-radius: 20px;
+    font-family: VazirMatnFont;
     ${Typography.Body2}
     transition: all ease-in-out 0.3s;
     ${Button}

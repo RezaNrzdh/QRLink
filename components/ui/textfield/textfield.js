@@ -5,6 +5,9 @@ export const Textfield = ({
     label,
     placeholder,
     type,
+    name,
+    id,
+    pattern = null,
     marginbottom = 24
 }) => {
     return(
@@ -13,7 +16,13 @@ export const Textfield = ({
                 {label}
             </S.Label>
             <S.Textfield width={width}>
-                <input placeholder={placeholder} type={type} />
+                <input
+                    placeholder={placeholder}
+                    type={type}
+                    name={name}
+                    id={id}
+                    pattern={pattern}
+                    />
             </S.Textfield>
         </S.TextfieldContainer>
     );
