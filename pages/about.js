@@ -1,8 +1,20 @@
+import {useEffect} from 'react';
 import Layout from 'components/layouts';
 import Container from 'hoc/container';
 import Link from 'next/link';
+import Axios from 'axios';
 
 const AboutPage = () => {
+
+    useEffect(() => {
+        getResponce();
+    },[]);
+
+    const getResponce = async () => {
+        const d = await Axios.post('api/test');
+        console.log(d);
+    }
+
     return(
         <Layout>
             <Container>
