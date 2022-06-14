@@ -3,7 +3,7 @@ import {useRouter} from 'next/router';
 import Axios from 'axios';
 
 import {deviceContext} from 'context/isMobile';
-import {RegisterPageDesktop, RegisterPageMobile} from 'view/register/desktop';
+import {RegisterPageDesktop, RegisterPageMobile} from 'view/register';
 import OTPGenerator from 'lib/otp';
 
 const RegisterPage = () => {
