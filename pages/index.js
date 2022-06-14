@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import Link from 'next/link';
 import Container from 'hoc/container';
-import Layout from 'components/layouts';
+import {Layout} from 'components/layouts/main';
 import {deviceContext} from 'context/isMobile';
 
 const IndexPage = () => {

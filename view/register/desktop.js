@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import Container from "hoc/container";
-import * as S from './index.styled';
+import {AuthLayout} from 'components/layouts/index';
+import * as S from './desktop.styled';
 import {Button, Icon, Logo, Textfield} from 'components/index';
 
 export const RegisterPageDesktop = (props) => {
     return(
-        <S.Background>
+        <AuthLayout>
             <S.Container>
                 <S.FormWrapper>
                     <form onSubmit={props.click}>
@@ -50,6 +50,6 @@ export const RegisterPageDesktop = (props) => {
                     </S.Logo> 
                 </S.HeroWrapper>
             </S.Container>            
-        </S.Background>
+        </AuthLayout>
     );
 }

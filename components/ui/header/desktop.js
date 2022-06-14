@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Container from 'hoc/container';
-import * as S from './header.styled';
+import * as S from './desktop.styled';
 import {Navigation, Logo} from 'components/index';
 import { Button } from 'components/index';
 

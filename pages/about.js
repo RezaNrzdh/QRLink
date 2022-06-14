@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import Layout from 'components/layouts';
+import {Layout} from 'components/layouts/main';
 import Container from 'hoc/container';
 import Link from 'next/link';
 import Axios from 'axios';

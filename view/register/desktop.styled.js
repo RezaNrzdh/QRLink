@@ -1,17 +1,9 @@
 import { Color, Typography } from 'components';
 import styled from 'styled-components';
 
-export const Background = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: ${Color.background.main};
-`;
-
 export const Container = styled.section`
     display: flex;
+    margin: auto;
     height: fit-content;
 `;
 
