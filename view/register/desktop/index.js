@@ -6,7 +6,7 @@ import {Button, Icon, Logo, Textfield} from 'components/index';
 export const RegisterPageDesktop = (props) => {
     return(
         <S.Background>
-            <Container>
+            <S.Container>
                 <S.FormWrapper>
                     <form onSubmit={props.click}>
                         <S.Title>
@@ -49,7 +49,7 @@ export const RegisterPageDesktop = (props) => {
                         </Link>
                     </S.Logo> 
                 </S.HeroWrapper>
-            </Container>            
+            </S.Container>            
         </S.Background>
     );
 }

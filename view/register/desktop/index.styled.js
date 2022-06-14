@@ -3,30 +3,27 @@ import styled from 'styled-components';
 
 export const Background = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background-image: url('/images/bg.svg');
-    background-position: top center;
-    background-repeat: repeat-y;
+    background-color: ${Color.background.main};
+`;
+
+export const Container = styled.section`
+    display: flex;
+    height: fit-content;
 `;
 
 export const FormWrapper = styled.section`
     display: flex;
     flex-direction: column;
-    margin-top: 88px;
-    width: 50%;
-    padding-left: 20%;
+    width: 407px;
+    min-height: 480px;
+    padding: 40px;
     box-sizing: border-box;
-
-    @media (max-width: 1280px) {
-        padding-left: 18%;
-    }
-    @media (max-width: 1194px) {
-        padding-left: 13%;
-    }
-    @media (max-width: 1024px) {
-        padding-left: 10%;
-    }
+    border-radius: 0 24px 24px 0;
+    background-color: ${Color.background.light};
 `;
 
 export const Title = styled.div`
@@ -65,11 +62,11 @@ export const DoNotRegisterYet = styled.div`
 
 export const HeroWrapper = styled.section`
     display: flex;
-    box-sizing: border-box;
     flex-direction: column;
-    width: 50%;
-    margin-top: 88px;
-    padding-right: 64px;
+    width: 407px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 24px 0 0 24px;
     background-color: ${Color.primary.light};
 `;
 
