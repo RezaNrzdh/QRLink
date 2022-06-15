@@ -26,7 +26,8 @@ const RegisterPage = () => {
             });
 
             console.log(createUser);
-            router.push({
+            
+            router.replace({
                 pathname: '/auth/code',
                 query: {mobile: createUser.data.data.mobile}
             })

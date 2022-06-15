@@ -4,7 +4,7 @@ import {useRouter} from 'next/router';
 import {deviceContext} from 'context/isMobile';
 import {OTPCodeDesktop, OTPCodeMobile} from 'view/otpcode';
 
-const OTPCode = (props) => {
+const OTPCode = () => {
     
     const router = useRouter();
     const{isMobile} = useContext(deviceContext);

@@ -52,6 +52,17 @@ export const Otp = styled.div`
 `;
 
 export const Error = styled.label`
+    display: flex;
     color: ${Color.danger.main};
     ${Typography.Caption};
+    margin-bottom: 24px;
+`;
+
+export const Resend = styled.div`
+    display: flex;
+    margin-top: 24px;
+    a{
+        ${Typography.Caption};
+        color: ${Color.text.light};
+    }
 `;

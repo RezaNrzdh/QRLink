@@ -1,7 +1,9 @@
-import {AuthLayout} from 'components/layouts';
 import react from 'react';
 import { useRef } from 'react';
 import * as S from './desktop.styled';
+
+import {AuthLayout} from 'components/layouts';
+import {Button} from 'components';
 
 export const OTPCodeDesktop = (props) => {
 
@@ -39,12 +41,24 @@ export const OTPCodeDesktop = (props) => {
                                 min={0}
                                 max={9}
                                 onChange={FocusHanlder}
+                                autoComplete='off'
                                 ref={NextInput.current[index] = react.createRef()}
                                 />
                         })
                     }
                 </S.Otp>
                 <S.Error>کد وارد شده اشتباه است، لطفا مجددا تلاش کنید.</S.Error>
+                <Button
+                    as='button'
+                    variant='contained'
+                    colors='primary'
+                    type='submit'>
+                        بررسی کد تایید
+                </Button>
+                <S.Resend>
+                    <a className='link'>ارسال مجدد کد یکبار مصرف</a>
+                    <label></label>
+                </S.Resend>
             </S.Container>
         </AuthLayout>
     );
