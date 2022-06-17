@@ -14,7 +14,7 @@ const IndexPage = () => {
                 <h1>Home Page</h1>
                 <p>Lorem ipsum dolor esmit, device detected is</p>
                 <Link href='about'><button>Go to about page</button></Link>
-                <Link href='contact'><button>Go to contact page</button></Link>   
+                <Link href='temp'><button>Go to contact page</button></Link>   
             </Container>
         </Layout>
     );

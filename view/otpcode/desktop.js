@@ -10,7 +10,6 @@ export const OTPCodeDesktop = (props) => {
     let NextInput = useRef([]);
 
     const FocusHanlder = (event) => {
-        console.log(event.target.value);
         if(event.target.value !== ''){
             if(event.target.name < 5){
                 NextInput.current[parseInt(event.target.name) + 1].current.focus();
