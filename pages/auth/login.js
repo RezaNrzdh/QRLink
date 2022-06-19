@@ -1,10 +1,10 @@
 import {useContext, useEffect} from 'react';
-import {deviceContext} from 'context/isMobile';
+import {mainContext} from 'context/mainContext';
 import {LoginPageDesktop, LoginPageMobile} from 'view/login/index';
 
 const LoginPage = () => {
     console.log(11);
-    const {isMobile} = useContext(deviceContext);
+    const {isMobile} = useContext(mainContext);
     console.log(22);
     return isMobile === true
         ? <LoginPageMobile />

@@ -1,5 +1,5 @@
-import react from 'react';
-import { useRef } from 'react';
+import react, { useEffect, useRef, useMemo } from 'react';
+import {useRouter} from 'next/router';
 import * as S from './desktop.styled';
 
 import {AuthLayout} from 'components/layouts';
@@ -7,7 +7,14 @@ import {Button} from 'components';
 
 export const OTPCodeDesktop = (props) => {
 
+    const router = useRouter();
     let NextInput = useRef([]);
+
+    useEffect(() => {
+        if(props.mobileNumber === 0){
+            router.push('/auth/register');
+        }
+    })
 
     const FocusHanlder = (event) => {
         console.log(event.target.value);
@@ -28,7 +35,7 @@ export const OTPCodeDesktop = (props) => {
             <S.Container>
                 <S.Title>
                     <h1>احراز هویت</h1>
-                    <label>کد تایید ارسال شده به شماره {props.mobile} را وارد کنید.</label>               
+                    <label>کد تایید ارسال شده به شماره {props.mobileNumber} را وارد کنید.</label>               
                 </S.Title>
                 <S.Otp>
                     {

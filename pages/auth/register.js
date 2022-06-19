@@ -2,14 +2,14 @@ import {useContext} from 'react';
 import {useRouter} from 'next/router';
 import Axios from 'axios';
 
-import {deviceContext} from 'context/isMobile';
+import {mainContext} from 'context/mainContext';
 import {RegisterPageDesktop, RegisterPageMobile} from 'view/register';
 import OTPGenerator from 'lib/otp';
 
 const RegisterPage = () => {
 
     const router = useRouter();
-    const{isMobile} = useContext(deviceContext);
+    const{isMobile, MobileNumberHandler} = useContext(mainContext);
 
     const onSubmitButtonHandler = async (event) => {        
         event.preventDefault();
@@ -26,11 +26,9 @@ const RegisterPage = () => {
             });
 
             console.log(createUser);
+            MobileNumberHandler(createUser.data.data.mobile);
             
-            router.replace({
-                pathname: '/auth/code',
-                query: {mobile: createUser.data.data.mobile}
-            })
+            router.push('/auth/code');
         }
         else {
             console.log('Wrong...!');

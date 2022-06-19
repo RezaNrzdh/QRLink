@@ -1,17 +1,15 @@
 import {useContext} from 'react';
-import {useRouter} from 'next/router';
 
-import {deviceContext} from 'context/isMobile';
+import {mainContext} from 'context/mainContext';
 import {OTPCodeDesktop, OTPCodeMobile} from 'view/otpcode';
 
 const OTPCode = () => {
     
-    const router = useRouter();
-    const{isMobile} = useContext(deviceContext);
+    const{isMobile, mobileNumber, MobileNumberHandler} = useContext(mainContext);
 
     return isMobile === true
-        ? <OTPCodeMobile mobile={router.query.mobile} />
-        : <OTPCodeDesktop mobile={router.query.mobile} />
+        ? <OTPCodeMobile mobileNumber={mobileNumber} MobileNumberHandler={MobileNumberHandler} />
+        : <OTPCodeDesktop mobileNumber={mobileNumber} MobileNumberHandler={MobileNumberHandler} />
 }
 
 export default OTPCode;

@@ -2,11 +2,11 @@ import {useContext} from 'react';
 import Link from 'next/link';
 import Container from 'hoc/container';
 import {Layout} from 'components/layouts/main';
-import {deviceContext} from 'context/isMobile';
+import {mainContext} from 'context/mainContext';
 
 const IndexPage = () => {
 
-    const {isMobile} = useContext(deviceContext);
+    const {isMobile} = useContext(mainContext);
 
     return (
         <Layout>

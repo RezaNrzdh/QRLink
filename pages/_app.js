@@ -1,12 +1,12 @@
 import {GlobalStyle} from 'components/globalStyled';
-import DeviceProvider from 'context/isMobile';
+import MainProvider from 'context/mainContext';
 
 function App({Component, pageProps}) {
     return (
-        <DeviceProvider>
+        <MainProvider>
             <GlobalStyle />
             <Component {...pageProps} />
-        </DeviceProvider>
+        </MainProvider>
     );
 }
 
