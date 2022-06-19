@@ -4,7 +4,7 @@ import Axios from 'axios';
 
 import {mainContext} from 'context/mainContext';
 import {RegisterPageDesktop, RegisterPageMobile} from 'view/register';
-import OTPGenerator from 'lib/otp';
+
 
 const RegisterPage = () => {
 
@@ -16,19 +16,19 @@ const RegisterPage = () => {
 
         const mobile   = event.target.phone.value;
         const checked = event.target.checkbox.checked;
-        const otp     = OTPGenerator();
 
         if(phone !== null && checked === true){
            const createUser = await Axios.post('/api/auth/register',{ 
-               mobile: mobile,
-               otp: otp,
-               otpExpired: Date.now() + 120000
+               mobile: mobile
             });
 
             console.log(createUser);
             MobileNumberHandler(createUser.data.data.mobile);
             
+<<<<<<< HEAD
             router.push('/auth/code');
+=======
+>>>>>>> dfb122462da33a6b98899c1fa578abe40d620c02
         }
         else {
             console.log('Wrong...!');
