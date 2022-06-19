@@ -5,13 +5,7 @@ import {OTPCodeDesktop, OTPCodeMobile} from 'view/otpcode';
 
 const OTPCode = ({data}) => {
     
-<<<<<<< HEAD
     const{isMobile, mobileNumber, MobileNumberHandler} = useContext(mainContext);
-=======
-    console.log(data);
-    const router = useRouter();
-    const{isMobile} = useContext(deviceContext);
->>>>>>> dfb122462da33a6b98899c1fa578abe40d620c02
 
     return isMobile === true
         ? <OTPCodeMobile mobileNumber={mobileNumber} MobileNumberHandler={MobileNumberHandler} />

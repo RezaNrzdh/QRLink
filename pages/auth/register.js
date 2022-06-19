@@ -25,10 +25,7 @@ const RegisterPage = () => {
             console.log(createUser);
             MobileNumberHandler(createUser.data.data.mobile);
             
-<<<<<<< HEAD
             router.push('/auth/code');
-=======
->>>>>>> dfb122462da33a6b98899c1fa578abe40d620c02
         }
         else {
             console.log('Wrong...!');
