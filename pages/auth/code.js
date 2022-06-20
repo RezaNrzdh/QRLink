@@ -12,13 +12,4 @@ const OTPCode = ({data}) => {
         : <OTPCodeDesktop mobileNumber={mobileNumber} MobileNumberHandler={MobileNumberHandler} />
 }
 
-export const getServerSideProps = async (ctx) => {
-    console.log(ctx);
-    return {
-        props:{
-            data:{d: 1}
-        }
-    }
-}
-
 export default OTPCode;

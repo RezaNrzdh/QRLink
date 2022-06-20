@@ -10,6 +10,8 @@ export const OTPCodeDesktop = (props) => {
     const router = useRouter();
     let NextInput = useRef([]);
 
+    console.log('otpcode-desktop');
+
     useEffect(() => {
         if(props.mobileNumber === 0){
             router.push('/auth/register');
