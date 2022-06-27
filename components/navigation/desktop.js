@@ -1,4 +1,4 @@
-import * as S from './navigation.styled';
+import * as S from './desktop.styled';
 import Link from 'next/link';
 
 const Navigation = () => {

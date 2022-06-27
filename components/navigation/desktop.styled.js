@@ -1,5 +1,5 @@
-import { Color } from 'components/utils/color';
-import { Typography } from 'components/utils/typography';
+import { Color } from 'help/color';
+import { Typography } from 'help/typography';
 import styled from 'styled-components';
 
 export const Unordered = styled.ul`

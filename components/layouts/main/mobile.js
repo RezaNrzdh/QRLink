@@ -1,6 +1,6 @@
-import {MobileHeader} from 'components/ui/header';
-import {MobileFooter} from 'components/ui/footer';
-import {} from 'components/ui/footer';
+import {MobileHeader} from 'components/header';
+import {MobileFooter} from 'components/footer';
+import {} from 'components/footer';
 
 export const MobileLayout = ({props}) => {
     return(

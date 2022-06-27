@@ -1,4 +1,4 @@
-import { Color } from "components/utils/color";
+import { Color } from "help/color";
 
 export const DesktopFooter = () => {
     return(

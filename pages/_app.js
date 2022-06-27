@@ -1,4 +1,4 @@
-import {GlobalStyle} from 'components/globalStyled';
+import {GlobalStyle} from 'help/globalStyled';
 import MainProvider from 'context/mainContext';
 
 function App({Component, pageProps}) {

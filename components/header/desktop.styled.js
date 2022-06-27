@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Elevation} from 'components/index';
-import { Color } from 'components/utils/color';
+import { Color } from 'help/color';
 
 export const Header = styled.header`
     display: flex;

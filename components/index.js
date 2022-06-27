@@ -1,17 +1,17 @@
 // Utils
-export * from 'components/utils/elevation';
-export * from 'components/utils/color';
-export * from 'components/utils/typography';
-export * from 'components/utils/icon';
+export * from 'help/elevation';
+export * from 'help/color';
+export * from 'help/typography';
+export * from 'help/icon';
 
 // Overall
-export * from 'components/ui/logo/logo';
-export * from 'components/ui/button/button';
-export * from 'components/ui/textfield/textfield';
+export * from 'components/logo/logo';
+export * from 'components/button/button';
+export * from 'components/textfield/textfield';
 
 // Desktop
-export * from 'components/ui/header';
-export * from 'components/ui/footer';
-export * from 'components/ui/navigation/desktop/navigation';
+export * from 'components/header';
+export * from 'components/footer';
+export * from 'components/navigation/desktop';
 
 //Mobile

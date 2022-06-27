@@ -1,5 +1,5 @@
-import {DesktopHeader} from 'components/ui/header';
-import {DesktopFooter} from 'components/ui/footer';
+import {DesktopHeader} from 'components/header';
+import {DesktopFooter} from 'components/footer';
 
 export const DesktopLayout = ({props}) => {
     return(
