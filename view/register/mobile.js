@@ -1,3 +1,5 @@
-export const RegisterPageMobile = (props) => {
+const RegisterViewMobile = (props) => {
     return(<></>);
 }
+
+export default RegisterViewMobile;

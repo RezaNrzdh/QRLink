@@ -3,7 +3,7 @@ import {useRouter} from 'next/router';
 import Axios from 'axios';
 
 import {mainContext} from 'context/mainContext';
-import {RegisterPageDesktop, RegisterPageMobile} from 'view/register';
+import RegisterView from 'view/register';
 
 
 const RegisterPage = () => {
@@ -32,9 +32,7 @@ const RegisterPage = () => {
         }
     }
 
-    return isMobile === true
-        ? <RegisterPageMobile />
-        : <RegisterPageDesktop click={onSubmitButtonHandler} />;
+    return <RegisterView isMobile={isMobile} submitHandler={onSubmitButtonHandler} />;
 }
 
 export default RegisterPage;

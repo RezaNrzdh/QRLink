@@ -3,7 +3,7 @@ import {AuthLayout} from 'components/layouts/index';
 import * as S from './desktop.styled';
 import {Button, Icon, Logo, Textfield} from 'components/index';
 
-export const RegisterPageDesktop = (props) => {
+const RegisterViewDesktop = (props) => {
     return(
         <AuthLayout>
             <S.Container>
@@ -53,3 +53,5 @@ export const RegisterPageDesktop = (props) => {
         </AuthLayout>
     );
 }
+
+export default RegisterViewDesktop;
