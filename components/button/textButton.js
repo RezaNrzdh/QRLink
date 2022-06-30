@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 import { Color } from 'help/color';
 import { Typography } from 'help/typography';
 
-export const Button = ({
+export const TextButton = ({
     as = 'a',
     click = null,
     fullWidth = false,
@@ -28,38 +28,12 @@ export const Button = ({
 }
 
 const Colors = ({colors}) => {
-    if(colors === 'primary'){
+    if(colors === 'dark'){
         return css`
-            background-color: ${Color.primary.main};
             color: ${Color.text.main};
             &:hover{
-                background-color: ${Color.action.outlined};
-                color: ${Color.text.contrast};
-            }
-        `;
-    }
-    else if(colors === 'success'){
-        return css`
-            background-color: ${Color.success.main};
-            color: ${Color.success.main};
-            &:hover{
-                background-color: ${Color.action.outlined};
-                color: ${Color.text.contrast};
-            }
-        `;
-    }
-    else if(colors === 'dark'){
-        return css`
-            background-color: ${Color.action.outlined};    
-            color: ${Color.text.contrast};
-            &:hover{
                 background-color: ${Color.action.hover};
-                color: ${Color.text.main};
             }
-        `;
-    }
-    else {
-        return css`
         `;
     }
 }
@@ -74,6 +48,7 @@ const Container = styled.a`
     height: 40px;
     border: none;
     border-radius: ${p => p.radius };
+    background-color: none;
     font-family: VazirMatnFont;
     transition: all ease-in-out 0.3s;
     ${Colors};

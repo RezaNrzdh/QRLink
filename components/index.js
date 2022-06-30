@@ -7,6 +7,8 @@ export * from 'help/icon';
 // Overall
 export * from 'components/logo/logo';
 export * from 'components/button/button';
+export * from 'components/button/outlinedButton';
+export * from 'components/button/textButton';
 export * from 'components/textfield/textfield';
 
 // Desktop
