@@ -2,7 +2,7 @@ import Container from 'hoc/container';
 import {Navigation, Logo} from 'components/index';
 import { Button, TextButton } from 'components/index';
 import styled from 'styled-components';
-import {Elevation} from 'components/index';
+import {Elevation} from 'utils/elevation';
 import { Color } from 'utils/color';
 
 export const DesktopHeader = () => {

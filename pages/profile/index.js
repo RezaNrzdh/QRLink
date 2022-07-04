@@ -1,4 +1,4 @@
-import {Layout} from "components/layouts/main";
+import {Layout} from "components/index";
 import Container from "hoc/container";
 
 const Dashboard = () => {

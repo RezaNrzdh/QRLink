@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {Layout} from 'components/layouts/main';
+import {Layout} from 'components/index';
 import Container from 'hoc/container';
 import Link from 'next/link';
 
