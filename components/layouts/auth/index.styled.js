@@ -1,4 +1,4 @@
-import { Color } from 'help/color';
+import { Color } from 'utils/color';
 import styled from 'styled-components';
 
 export const Background = styled.div`

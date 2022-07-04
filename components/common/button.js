@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
-import { Color } from 'help/color';
-import { Typography } from 'help/typography';
+import { Color } from 'utils/color';
+import { Typography } from 'utils/typography';
 
 export const Button = ({
     as = 'a',

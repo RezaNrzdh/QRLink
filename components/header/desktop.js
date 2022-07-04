@@ -3,7 +3,7 @@ import {Navigation, Logo} from 'components/index';
 import { Button, TextButton } from 'components/index';
 import styled from 'styled-components';
 import {Elevation} from 'components/index';
-import { Color } from 'help/color';
+import { Color } from 'utils/color';
 
 export const DesktopHeader = () => {
     return(

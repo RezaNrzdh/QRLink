@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Color } from 'help/color';
-import { Typography } from 'help/typography';
+import { Color } from 'utils/color';
+import { Typography } from 'utils/typography';
 
 const Navigation = () => {
     return(

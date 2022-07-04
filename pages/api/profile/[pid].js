@@ -1,4 +1,4 @@
-import Connection from 'help/connection';
+import Connection from 'utils/connection';
 import QRCode from 'qrcode';
 
 const RouteHandler = async (req, res) => {

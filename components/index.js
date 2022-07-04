@@ -1,15 +1,9 @@
-// Utils
-export * from 'help/elevation';
-export * from 'help/color';
-export * from 'help/typography';
-export * from 'help/icon';
-
-// Overall
-export * from 'components/logo/logo';
-export * from 'components/button/button';
-export * from 'components/button/outlinedButton';
-export * from 'components/button/textButton';
-export * from 'components/textfield/textfield';
+//Common
+export * from 'components/common/logo';
+export * from 'components/common/button';
+export * from 'components/common/outlinedButton';
+export * from 'components/common/textButton';
+export * from 'components/common/textfield';
 
 // Desktop
 export * from 'components/header';

@@ -1,8 +1,8 @@
 import styled, {css} from 'styled-components';
-import { Color } from 'help/color';
-import { Typography } from 'help/typography';
+import { Color } from 'utils/color';
+import { Typography } from 'utils/typography';
 
-export const TextButton = ({
+export const OutlinedButton = ({
     as = 'a',
     click = null,
     fullWidth = false,
@@ -28,12 +28,26 @@ export const TextButton = ({
 }
 
 const Colors = ({colors}) => {
-    if(colors === 'dark'){
+    if(colors === 'primary'){
         return css`
+            border: 1px solid ${Color.primary.main};
             color: ${Color.text.main};
-            &:hover{
-                background-color: ${Color.action.hover};
-            }
+        `;
+    }
+    else if(colors === 'success'){
+        return css`
+            border: 1px solid ${Color.success.main};
+            color: ${Color.success.main};
+        `;
+    }
+    else if(colors === 'dark'){
+        return css`
+            border: 1px solid ${Color.action.outlined};    
+            color: ${Color.text.contrast};
+        `;
+    }
+    else {
+        return css`
         `;
     }
 }
@@ -46,7 +60,6 @@ const Container = styled.a`
     padding: 0 24px;
     width: ${ p => p.fullWidth ? '100%' : null};
     height: 40px;
-    border: none;
     border-radius: ${p => p.radius };
     background-color: none;
     font-family: VazirMatnFont;
