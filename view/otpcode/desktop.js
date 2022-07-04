@@ -2,7 +2,7 @@ import react, { useEffect, useRef, useMemo } from 'react';
 import {useRouter} from 'next/router';
 import * as S from './desktop.styled';
 
-import {AuthLayout} from 'components/layouts';
+import {AuthLayout} from 'components/index';
 import {Button} from 'components';
 
 export const OTPCodeDesktop = (props) => {

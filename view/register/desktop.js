@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {AuthLayout} from 'components/layouts/index';
+import {AuthLayout} from 'components/index';
 import * as S from './desktop.styled';
 import {Button, Icon, Logo, Textfield} from 'components/index';
 

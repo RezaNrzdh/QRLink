@@ -5,6 +5,7 @@ export * from 'components/common/outlinedButton';
 export * from 'components/common/textButton';
 export * from 'components/common/textfield';
 export * from 'components/common/layout';
+export * from 'components/common/authLayout';
 
 // Desktop
 export * from 'components/header';
