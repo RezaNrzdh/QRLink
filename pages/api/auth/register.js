@@ -30,7 +30,7 @@ const RouteHandler = async (req, res) => {
         else{
             res.status(200).json({
                 success: false,
-                err: 'Mobile registered Successfuly!'
+                err: 'Mobile registered successfuly!'
             })
         }
     }
