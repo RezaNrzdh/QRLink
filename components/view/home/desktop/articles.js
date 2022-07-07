@@ -1,3 +1,3 @@
-const Articles = () => <p>ARTICLES SECTION</p>;
+const Articles = () => <p style={{ height: '500px'}}>ARTICLES SECTION</p>;
 
 export default Articles;

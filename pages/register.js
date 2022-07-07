@@ -34,8 +34,6 @@ const RegisterPage = () => {
         else {
             console.log('please fill mobile number and checked condition and rules')
         }
-
-        //
     }
 
     return isMobile === true

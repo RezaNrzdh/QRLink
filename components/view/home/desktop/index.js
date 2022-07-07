@@ -9,11 +9,9 @@ const Desktop = () => {
     return(
         <Layout>
             <Hero />
-            <Container column>
-                <Features />
-                <Customers />
-                <Articles />
-            </Container>
+            <Features />
+            <Customers />
+            <Articles />
         </Layout>
     );
 }

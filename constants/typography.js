@@ -2,42 +2,42 @@ import {css} from 'styled-components';
 
 const Headline1 = css`
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Headline2 = css`
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Headline3 = css`
     font-size: 1.75rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Headline4 = css`
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Headline5 = css`
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Headline6 = css`
     font-size: 1.125rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Subtitle1 = css`
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Subtitle2 = css`
     font-size: 0.875rem;
-    font-weight: 700;
+    font-weight: 500;
 `;
 
 const Body1 = css`

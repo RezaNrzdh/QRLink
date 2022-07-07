@@ -1,3 +1,3 @@
-const Features = () => <p>FEATURES SECTION</p>;
+const Features = () => <p style={{height: '500px'}}>FEATURES SECTION</p>;
 
 export default Features;
