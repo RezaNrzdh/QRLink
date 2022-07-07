@@ -42,10 +42,3 @@ export const CustomerCard = styled.div`
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 24px;
 `;
-
-export const Card = styled.div`
-    display: flex;
-    min-height: 256px;
-    border-radius: 16px;
-    background-color: white;
-`;
