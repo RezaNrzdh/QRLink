@@ -1,15 +1,25 @@
 import {useContext} from 'react';
+import dynamic from 'next/dynamic';
+import {mainContext} from 'provider/mainContext';
 
-import {mainContext} from 'context/mainContext';
-import {OTPCodeDesktop, OTPCodeMobile} from 'view/otpcode';
+const Desktop = dynamic(() => import('components/view/otpcode/desktop'));
+const Mobile  = dynamic(() => import('components/view/otpcode/mobile'));
 
-const OTPCode = ({data}) => {
+const OTPCode = () => {
     
     const{isMobile, mobileNumber, MobileNumberHandler} = useContext(mainContext);
 
     return isMobile === true
-        ? <OTPCodeMobile mobileNumber={mobileNumber} MobileNumberHandler={MobileNumberHandler} />
-        : <OTPCodeDesktop mobileNumber={mobileNumber} MobileNumberHandler={MobileNumberHandler} />
+        ? 
+            <Mobile 
+                mobileNumber={mobileNumber} 
+                MobileNumberHandler={MobileNumberHandler}
+            />
+        : 
+            <Desktop 
+                mobileNumber={mobileNumber} 
+                MobileNumberHandler={MobileNumberHandler}
+            />
 }
 
 export default OTPCode;

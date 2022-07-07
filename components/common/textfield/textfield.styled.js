@@ -1,50 +1,22 @@
 import styled from 'styled-components';
-import { Color } from 'utils/color';
-import { Typography } from 'utils/typography';
+import { Color } from 'constants/color';
+import { Typography } from 'constants/typography';
 
 
-export const Textfield = ({
-    width,
-    label,
-    placeholder,
-    type,
-    name,
-    id,
-    pattern = null,
-    marginbottom = 24
-}) => {
-    return(
-        <Container marginbottom={marginbottom}>
-            <Label>
-                {label}
-            </Label>
-            <InputContainer width={width}>
-                <input
-                    placeholder={placeholder}
-                    type={type}
-                    name={name}
-                    id={id}
-                    pattern={pattern}
-                    />
-            </InputContainer>
-        </Container>
-    );
-}
-
-const Container = styled.div`
+export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin-bottom: ${ props => `${props.marginbottom}px`};
 `;
 
-const Label = styled.label`
+export const Label = styled.label`
     display: flex;
     color: ${Color.text.main};
     ${Typography.Body2};
     margin-bottom: 6px;
 `;
 
-const InputContainer = styled.div`
+export const InputContainer = styled.div`
     display: flex;
     overflow: hidden;
     width: ${ props => props.width ? `${props.width}px` : null };

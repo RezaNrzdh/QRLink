@@ -1,5 +1,5 @@
 import {useContext, useEffect} from 'react';
-import {mainContext} from 'context/mainContext';
+import {mainContext} from 'provider/mainContext';
 import {LoginPageDesktop, LoginPageMobile} from 'view/login/index';
 
 const LoginPage = () => {

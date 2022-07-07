@@ -1,31 +1,7 @@
 import styled, {css} from 'styled-components';
-import { Color } from 'utils/color';
-import { Typography } from 'utils/typography';
+import { Color } from 'constants/color';
+import { Typography } from 'constants/typography';
 
-export const OutlinedButton = ({
-    as = 'a',
-    click = null,
-    fullWidth = false,
-    size = 'normal',
-    radius = '20px',
-    href,
-    colors,
-    ...props
-}) => {
-    return(
-        <Container 
-            as={as} 
-            href={href} 
-            onClick={click} 
-            fullWidth={fullWidth}
-            btnSize={size}
-            colors={colors} 
-            radius={radius}
-        >
-            { props.children }
-        </Container>  
-    );
-}
 
 const Colors = ({colors}) => {
     if(colors === 'primary'){
@@ -52,7 +28,7 @@ const Colors = ({colors}) => {
     }
 }
 
-const Container = styled.a`
+export const Container = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,4 +42,4 @@ const Container = styled.a`
     transition: all ease-in-out 0.3s;
     ${Colors};
     ${Typography.Body2}
-    `;
+`;

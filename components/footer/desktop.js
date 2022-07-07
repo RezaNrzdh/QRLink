@@ -1,4 +1,4 @@
-import { Color } from "utils/color";
+import { Color } from "constants/color";
 
 export const DesktopFooter = () => {
     return(

@@ -1,4 +1,4 @@
-import { Color } from 'utils/color';
+import { Color } from 'constants/color';
 import styled from 'styled-components';
 
 export const AuthLayout = (props) => {

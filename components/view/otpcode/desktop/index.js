@@ -1,9 +1,10 @@
-import react, { useEffect, useRef, useMemo } from 'react';
+import react, { useEffect, useRef } from 'react';
 import {useRouter} from 'next/router';
 import * as S from './desktop.styled';
-
 import {AuthLayout} from 'components/index';
 import {Button} from 'components';
+
+
 
 export const OTPCodeDesktop = (props) => {
 
@@ -14,7 +15,7 @@ export const OTPCodeDesktop = (props) => {
 
     useEffect(() => {
         if(props.mobileNumber === 0){
-            router.push('/auth/register');
+            router.push('/register');
         }
     })
 

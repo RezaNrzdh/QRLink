@@ -1,5 +1,5 @@
 import {GlobalStyle} from 'utils/globalStyled';
-import MainProvider from 'context/mainContext';
+import MainProvider from 'provider/mainContext';
 
 function App({Component, pageProps}) {
     console.log('App');

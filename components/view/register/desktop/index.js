@@ -1,9 +1,11 @@
 import Link from 'next/link';
 import {AuthLayout} from 'components/index';
-import * as S from './desktop.styled';
-import {Button, Icon, Logo, Textfield} from 'components/index';
+import {Button, Logo, Textfield} from 'components/index';
+import {Icon} from 'constants/icon';
+import * as S from './index.styled';
 
-const RegisterViewDesktop = (props) => {
+
+const Desktop = (props) => {
     return(
         <AuthLayout>
             <S.Container>
@@ -24,14 +26,15 @@ const RegisterViewDesktop = (props) => {
                                 type={'checkbox'}
                                 name='checkbox'
                                 id='checkbox' />
-                            <label>شرایط و قوانین سایت هفده را می‌پذیرم.
-                            </label>
+                            <label>شرایط و قوانین سایت هفده را می‌پذیرم.</label>
                         </S.ForgetPassword>
                         <Button
                             as='button'
                             variant='contained'
                             colors='primary'
-                            type='submit'>ثبت نام در سایت</Button>
+                            type='submit'>
+                                ثبت نام در سایت
+                        </Button>
                         <S.DoNotRegisterYet>
                             <label>قبلا عضو شدی؟</label>
                             <Link href='/auth/login'><a className='link'>همین حالا وارد شو</a></Link>
@@ -54,4 +57,4 @@ const RegisterViewDesktop = (props) => {
     );
 }
 
-export default RegisterViewDesktop;
+export default Desktop;
