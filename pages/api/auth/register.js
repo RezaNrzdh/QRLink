@@ -3,6 +3,8 @@ import userModel from 'models/userModel';
 import OTPGenerator from 'utils/otp';
 
 const RouteHandler = async (req, res) => {
+    // Set Header
+    // /res.setHeader('Access-Control-Allow-Origin', process.env.DOMAIN);
 
     const {body} = req;
     const otp = OTPGenerator();
@@ -13,20 +15,32 @@ const RouteHandler = async (req, res) => {
         otp: otp,
         otpExpired: otpExpired
     }
-    // Set Header
-    // /res.setHeader('Access-Control-Allow-Origin', process.env.DOMAIN);
 
     await Connection();
 
-    const createUser = await userModel.create(userBody);
+    const checkUserExist = await userModel.findOne({ mobile: body.mobile});
 
-    if(createUser != null) {
+    if(checkUserExist){
+        if(checkUserExist.registeredDone === false){
+            res.status(200).json({
+                success: true,
+                mobile: checkUserExist.mobile
+            });
+        }
+        else{
+            res.status(200).json({
+                success: false,
+                err: 'Mobile registered Successfuly!'
+            })
+        }
+    }
+    else{
+        const createUser = await userModel.create(userBody);
         res.status(200).json({
             success: true,
-            data: createUser
-        })
+            mobile: createUser.mobile
+        });
     }
-
 }
 
 export default RouteHandler;

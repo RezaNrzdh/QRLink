@@ -12,29 +12,31 @@ const RegisterPage = () => {
     const router = useRouter();
     const{isMobile, MobileNumberHandler} = useContext(mainContext);
 
-
     const onSubmitButtonHandler = async (event) => {        
         event.preventDefault();
 
         const mobile   = event.target.phone.value;
         const checked  = event.target.checkbox.checked;
 
-        if(phone !== null && checked === true){
-           const createUser = await Axios.post('/api/auth/register',{ 
-               mobile: mobile
+        if(phone !== null && checked === true){            
+            const createUser = await Axios.post('/api/auth/register',{ 
+                mobile: mobile
             });
 
-            console.log(createUser);
-            MobileNumberHandler(createUser.data.data.mobile);
-            
-            router.push('/code');
+            if(createUser.data.success){
+                MobileNumberHandler(createUser.data.mobile);
+                router.push('/code');
+            }
+            else{
+                router.push('/login');
+            }
         }
         else {
-            console.log('Wrong...!');
+            console.log('please fill mobile number and checked condition and rules')
         }
+
+        //
     }
-
-
 
     return isMobile === true
         ? <Mobile click={onSubmitButtonHandler} />

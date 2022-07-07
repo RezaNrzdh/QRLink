@@ -2,7 +2,6 @@ import Connection from 'utils/connection';
 import QRCode from 'qrcode';
 
 const RouteHandler = async (req, res) => {
-
     const {method} = req;
 
     switch(method) {
@@ -30,7 +29,6 @@ const RouteHandler = async (req, res) => {
     const DeleteProfile = (req, res) => {
 
     }
-
 }
 
 export default RouteHandler;
