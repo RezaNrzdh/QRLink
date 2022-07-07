@@ -4,12 +4,12 @@ import Features from "./features";
 import Customers from "./customers/customers";
 import Articles from "./articles";
 
-const Desktop = () => {
+const Desktop = ({customers}) => {
     return(
         <Layout>
             <Hero />
             <Features />
-            <Customers />
+            <Customers customers={customers} />
             <Articles />
         </Layout>
     );

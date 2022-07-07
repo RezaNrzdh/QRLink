@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Customer = styled.section`
     display: flex;
     width: 100%;
-    min-height: 409px;
+    padding-bottom: 32px;
     background-color: ${Color.action.outlined};
 `;
 

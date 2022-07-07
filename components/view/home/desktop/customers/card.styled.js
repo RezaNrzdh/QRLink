@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const Card = styled.div`
     display: flex;
     flex-direction: column;
+    min-width: 0%;
     min-height: 256px;
     border-radius: 16px;
     padding: 24px;
@@ -14,10 +15,18 @@ export const Card = styled.div`
 
 export const Title = styled.div`
     display: flex;
+    align-items: center;
     width: 100%;
     height: 40px;
     margin-bottom: 24px;
-    background-color: red;
+    div.customerLogo{
+        width: 100%;
+        height: inherit;
+    }
+    svg{
+        margin-right: auto;
+        color:${Color.stroke.main};
+    }
 `;
 
 export const Desc = styled.div`
@@ -25,12 +34,14 @@ export const Desc = styled.div`
     width: 100%;
     min-height: 114px;
     margin-bottom: 8px;
-    background-color: lightcoral;
+    color: ${Color.text.light};
+    ${Typography.Caption};
 `;
 
 export const Author = styled.div`
     display: flex;
     width: 100%;
     height: 24px;
-    background-color: red;
+    color: ${Color.text.main};
+    ${Typography.Body2};    
 `;

@@ -2,7 +2,8 @@ import Container from "hoc/container";
 import * as S from './customer.styled';
 import Card from "./card";
 
-const Customers = () => {
+const Customers = ({customers}) => {
+    console.log(customers);
     return(
         <S.Customer>
             <Container column>
@@ -12,8 +13,12 @@ const Customers = () => {
                 </S.Title>
                 <S.CustomerCard>
                     {
-                        [0,0,0,0].map((i) => {
-                            return <Card />
+                        customers.map((i) => {
+                            return <Card 
+                                        logo={i.logo} 
+                                        desc={i.desc} 
+                                        author={i.author}
+                                    />
                         })
                     }
                 </S.CustomerCard>
