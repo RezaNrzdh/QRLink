@@ -1,12 +1,12 @@
 import react, { useEffect, useRef } from 'react';
 import {useRouter} from 'next/router';
-import * as S from './desktop.styled';
+import * as S from './index.styled';
 import {AuthLayout} from 'components/index';
 import {Button} from 'components';
 
 
 
-export const OTPCodeDesktop = (props) => {
+const Desktop = (props) => {
 
     const router = useRouter();
     let NextInput = useRef([]);
@@ -72,3 +72,5 @@ export const OTPCodeDesktop = (props) => {
         </AuthLayout>
     );
 }
+
+export default Desktop;

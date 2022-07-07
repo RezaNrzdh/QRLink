@@ -1,4 +1,4 @@
-import styled, {css} from 'styled-components';
+import {css} from 'styled-components';
 
 const Headline1 = css`
     font-size: 2.5rem;

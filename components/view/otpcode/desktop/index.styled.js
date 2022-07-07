@@ -1,4 +1,5 @@
-import { Color, Typography } from 'components';
+import { Typography } from 'constants/typography';
+import {Color} from 'constants/color';
 import styled from 'styled-components';
 
 export const Container = styled.section`
