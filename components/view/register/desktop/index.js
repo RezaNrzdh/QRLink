@@ -37,7 +37,7 @@ const Desktop = (props) => {
                         </Button>
                         <S.DoNotRegisterYet>
                             <label>قبلا عضو شدی؟</label>
-                            <Link href='/auth/login'><a className='link'>همین حالا وارد شو</a></Link>
+                            <Link href='/login'><a className='link'>همین حالا وارد شو</a></Link>
                         </S.DoNotRegisterYet>
                     </form> 
                 </S.FormWrapper>                   

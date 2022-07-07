@@ -46,7 +46,7 @@ export const Container = styled.a`
     align-items: center;
     box-sizing: border-box;
     padding: 0 24px;
-    width: ${ p => p.fullWidth ? '100%' : null};
+    width: ${ p => p.fullWidth ? '100%' : 'fit-content'};
     height: 40px;
     border: none;
     border-radius: ${p => p.radius };
