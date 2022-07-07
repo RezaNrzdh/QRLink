@@ -8,13 +8,9 @@ const MainProvider = (props) => {
     const [isMobile, setIsMobile] = useState();
     const [mobileNumber, setMobileNumber] = useState(0);
 
-    useEffect(() => {
-        setIsMobile(UserAgent());
-    });
+    useEffect(() => setIsMobile(UserAgent()));
 
-    const MobileNumberHandler = (number) => {
-        setMobileNumber(number);
-    }
+    const MobileNumberHandler = number => setMobileNumber(number);
 
     return(
         <mainContext.Provider value={{
