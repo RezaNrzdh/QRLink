@@ -4,6 +4,8 @@ import customerModel from 'models/customerModel';
 const RouteHandler = async (req, res) => {
     const {method} = req;
 
+    await Connection();
+
     switch(method){
         case 'GET': 
             GetAllCustomers(req, res);
@@ -15,12 +17,19 @@ const RouteHandler = async (req, res) => {
 }
 
 const GetAllCustomers = async (req, res) => {
-    await Connection();
+    try{
+        const data = await customerModel.find().limit(4);
+        res.status(200).json({
+            success: true,
+            data: data
+        });
+    }
+    catch(err){
+        throw new err;
+    }
 }
 
 const CreateCustomer = async (req, res) => {
-    await Connection();
-
     try{
         await customerModel.create(req.body);
         res.status(200).json({

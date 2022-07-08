@@ -1,6 +1,7 @@
-import {useContext} from 'react';
+import {useContext, useEffect} from 'react';
 import dynamic from 'next/dynamic';
 import {mainContext} from 'provider/mainContext';
+import axios from 'axios';
 
 const Desktop = dynamic(() => import('components/view/home/desktop'));
 const Mobile  = dynamic(() => import('components/view/home/mobile'));
@@ -28,13 +29,24 @@ const customers = [
     }
 ];
 
-const IndexPage = () => {
-
+const IndexPage = ({s}) => {
+    console.log(s);
     const {isMobile} = useContext(mainContext);
 
     return isMobile === true
         ? <Mobile />
         : <Desktop customers={customers} />
+}
+
+export const getInitialProps  = async (context) => {
+
+    const dd = await axios.get('/api/customer');
+
+    return {
+        props: {
+            s: dd
+        }
+    }
 }
 
 export default IndexPage;

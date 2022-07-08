@@ -3,7 +3,6 @@ import * as S from './customer.styled';
 import Card from "./card";
 
 const Customers = ({customers}) => {
-    console.log(customers);
     return(
         <S.Customer>
             <Container column>
@@ -13,8 +12,9 @@ const Customers = ({customers}) => {
                 </S.Title>
                 <S.CustomerCard>
                     {
-                        customers.map((i) => {
-                            return <Card 
+                        customers.map((i, index) => {
+                            return <Card
+                                        key={index}
                                         logo={i.logo} 
                                         desc={i.desc} 
                                         author={i.author}
