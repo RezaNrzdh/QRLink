@@ -2,7 +2,7 @@ import { Layout } from "components/common/layout";
 import Hero from './hero';
 import Features from "./features";
 import Customers from "./customers/customers";
-import Articles from "./articles";
+import Articles from "./articles/articles";
 
 const Desktop = ({customers}) => {
     return(
