@@ -1,9 +1,11 @@
 import { Color } from "constants/color";
+import { Elevation } from "constants/elevation";
 import { Typography } from "constants/typography";
 import styled from "styled-components";
 
 export const Card = styled.div`
     display: flex;
+    cursor: pointer;
     overflow: hidden;
     flex-direction: column;
     min-width: 0%;
@@ -12,6 +14,14 @@ export const Card = styled.div`
     border: 1px solid ${Color.stroke.main};
     box-sizing: border-box;
     background-color: white;
+    transition: all ease-in-out 0.3s;
+    &:hover{
+        border: 1px solid ${Color.primary.main};
+        box-shadow: ${Elevation.header};
+        img{
+            transform: scale(1.1);
+        }
+    }
 `;
 
 export const ImageContainer = styled.div`
@@ -24,8 +34,10 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
     position: absolute;
-    width:100%;
+    object-fit: cover;
+    background-position: center center;
     top: 0;
+    transition: all ease-in-out 0.3s;
 `;
 
 export const Title = styled.h2`
@@ -34,13 +46,13 @@ export const Title = styled.h2`
     ${Typography.Subtitle1};
 `;
 
-export const Desc = styled.label`
+export const Desc = styled.div`
     padding:0 24px;
     color: ${Color.text.light};
     ${Typography.Caption};
 `;
 
-export const Author = styled.label`
+export const Author = styled.div`
     display: flex;
     margin-top: auto;
     padding-left: 24px;

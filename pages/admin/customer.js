@@ -21,7 +21,8 @@ const Customer = () => {
         <div style={{direction: 'rtl'}}>
             <Container column>
                 <br />
-                <h3>Create New Customer</h3><br />
+                <h3>Create New Customer</h3>
+                <br />
                 <form onSubmit={onSubmitHandler}>
                     <label>Logo</label>
                     <br />

@@ -7,12 +7,8 @@ const RouteHandler = async (req, res) => {
     await Connection();
 
     switch(method){
-        case 'GET': 
-            GetAllCustomers(req, res);
-            break;
-        case 'POST': 
-            CreateCustomer(req, res);
-            break;
+        case 'GET':  GetAllCustomers(req, res); break;
+        case 'POST': CreateCustomer(req, res); break;
     }
 }
 
