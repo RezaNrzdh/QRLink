@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import {Color} from 'constants/color';
 import { Typography } from 'constants/typography';
 
-export const Article = styled.div``;
+export const Article = styled.div`
+    display: flex;
+    width: 100%;
+    padding-bottom: 32px;
+`;
 
 export const Title = styled.div`
     display: flex;
@@ -32,4 +36,8 @@ export const Title = styled.div`
     }
 `;
 
-export const CardsContainer = styled.div``;
+export const CardsContainer = styled.div`
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 24px;
+`;
