@@ -1,4 +1,4 @@
-import {useContext, useEffect} from 'react';
+import {useContext} from 'react';
 import dynamic from 'next/dynamic';
 import {mainContext} from 'provider/mainContext';
 import axios from 'axios';

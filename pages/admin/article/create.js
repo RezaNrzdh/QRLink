@@ -1,8 +1,10 @@
 import Container from "hoc/container";
 import Link from "next/link";
+import {useRouter} from 'next/router';
 import Axios from 'axios';
 
 const CreateNewArticle = () => {
+    const router = useRouter();
 
     const onSubmitHandler = async (event) => {
         event.preventDefault();
@@ -21,6 +23,7 @@ const CreateNewArticle = () => {
                 description: description,
                 author: author
             });
+            router.push('/admin/article');
         }
         catch(err){
             throw new err;

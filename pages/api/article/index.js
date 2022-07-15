@@ -14,9 +14,10 @@ const RouteHandler = async (req, res) => {
 
 const GetAllArticles = async (req, res) => {
     try{
+        const data = await articleModel.find();
         res.status(200).json({
             success: true,
-            data: 'GET ALL ARTICLES.'
+            data: data
         });
     }
     catch(err){
@@ -26,9 +27,10 @@ const GetAllArticles = async (req, res) => {
 
 const CreateNewArticle = async (req, res) => {
     try{
+        const data = await articleModel.create(req.body);
         res.status(200).json({
             success: true,
-            data: 'CREATE NEW ARTICLE.'
+            data: data
         });
     }
     catch(err){
