@@ -2,7 +2,7 @@ import Container from 'hoc/container';
 import Card from './card';
 import * as S from './article.styled';
 
-const Articles = () => {
+const Articles = ({articles}) => {
     return(
         <S.Article>
             <Container column>
@@ -12,8 +12,14 @@ const Articles = () => {
                 </S.Title>
                 <S.CardsContainer>
                     {
-                        [0,0,0,0].map(() => {
-                            return <Card />
+                        articles.map((i, index) => {
+                            return <Card
+                                        key={index}
+                                        title={i.title}
+                                        image={i.image}
+                                        summary={i.summary}
+                                        author={i.author}
+                                    />
                         })
                     }
                 </S.CardsContainer>

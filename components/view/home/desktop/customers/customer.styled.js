@@ -39,6 +39,6 @@ export const Title = styled.div`
 
 export const CustomerCard = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-column-gap: 24px;
 `;

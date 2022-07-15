@@ -8,7 +8,6 @@ export const Card = styled.div`
     cursor: pointer;
     overflow: hidden;
     flex-direction: column;
-    min-width: 0%;
     min-height: 414px;
     border-radius: 16px;
     border: 1px solid ${Color.stroke.main};

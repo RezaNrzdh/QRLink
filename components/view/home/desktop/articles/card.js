@@ -1,14 +1,15 @@
 import * as S from './card.styled';
 
-const Card = () => {
+const Card = ({title, image, summary, author}) => {
+    console.log(title)
     return(
         <S.Card>
             <S.ImageContainer>
-                <S.Image src='/images/img.jpg' />
+                <S.Image src={image} />
             </S.ImageContainer>
-            <S.Title>جدیدترین مطالب سایت</S.Title>
-            <S.Desc>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز</S.Desc>
-            <S.Author>ادمین</S.Author>
+            <S.Title>{title}</S.Title>
+            <S.Desc>{summary}</S.Desc>
+            <S.Author>{author}</S.Author>
         </S.Card>
     );
 }
