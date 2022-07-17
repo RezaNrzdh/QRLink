@@ -15,12 +15,12 @@ const IndexPage = ({customers, articles}) => {
 }
 
 export const getStaticProps  = async (context) => {
-    const {data} = await axios.get(`${process.env.HOSTNAME}/api/customer`);
+    const customers = await axios.get(`${process.env.HOSTNAME}/api/customer`);
     const articles = await axios.get(`${process.env.HOSTNAME}/api/article?limit=4`);
     
     return {
         props: {
-            customers: data,
+            customers: customers.data,
             articles: articles.data
         }
     }
