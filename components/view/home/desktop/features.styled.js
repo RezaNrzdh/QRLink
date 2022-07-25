@@ -24,6 +24,7 @@ export const Info = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding: 72px;
     width: 50%;
     h2{
         color: ${Color.text.main};
