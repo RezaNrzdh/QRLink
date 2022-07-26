@@ -22,6 +22,7 @@ const RouteHandler = async (req, res) => {
 
     if(checkUserExist){
         if(checkUserExist.registeredDone === false){
+            await userModel.where({ mobile: body.mobile }).update({ otp: otp, otpExpired: otpExpired, $inc: { 'attempt': 1 } });
             res.status(200).json({
                 success: true,
                 mobile: checkUserExist.mobile
