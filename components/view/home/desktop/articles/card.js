@@ -1,7 +1,6 @@
 import * as S from './card.styled';
 
 const Card = ({title, image, summary, author}) => {
-    console.log(title)
     return(
         <S.Card>
             <S.ImageContainer>

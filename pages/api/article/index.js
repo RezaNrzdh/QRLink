@@ -13,7 +13,6 @@ const RouteHandler = async (req, res) => {
 }
 
 const GetAllArticles = async (req, res) => {
-    console.log(req.query)
     try{
         const data = await articleModel.find().limit(req.query.limit);
         res.status(200).json({

@@ -1,8 +1,8 @@
-import {NextRequest} from 'next/server';
-import {NextResponse} from 'next/server';
+import { NextRequest, NextResponse } from 'next/server'
 
-const Middleware = (NextRequest, NextResponse) => {
-    if(NextRequest.nextUrl.pathname.startsWith('/admin')){
+const Middleware = (NextRequest) => {
+    if(NextRequest.nextUrl.pathname === ('/admin')){
+        //return NextResponse.redirect(new URL('/login', NextRequest.url));
     }
 }
 

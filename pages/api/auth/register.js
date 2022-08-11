@@ -21,17 +21,25 @@ const RouteHandler = async (req, res) => {
     const checkUserExist = await userModel.findOne({ mobile: body.mobile});
 
     if(checkUserExist){
-        if(checkUserExist.registeredDone === false){
-            await userModel.where({ mobile: body.mobile }).update({ otp: otp, otpExpired: otpExpired, $inc: { 'attempt': 1 } });
-            res.status(200).json({
-                success: true,
-                mobile: checkUserExist.mobile
-            });
+        if(checkUserExist.attempt < 5){
+            if(checkUserExist.registeredDone === false){
+                await userModel.where({ mobile: body.mobile }).update({ otp: otp, otpExpired: otpExpired, $inc: { 'attempt': 1 } });
+                res.status(200).json({
+                    success: true,
+                    mobile: checkUserExist.mobile
+                });
+            }
+            else{
+                res.status(200).json({
+                    success: false,
+                    err: 'Mobile registered successfuly!'
+                })
+            }
         }
         else{
             res.status(200).json({
                 success: false,
-                err: 'Mobile registered successfuly!'
+                err: 'You have attempts to register in more then 5 times.'
             })
         }
     }
