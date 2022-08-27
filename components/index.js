@@ -1,12 +1,12 @@
 //Common
-export * from 'components/common/logo';
-export * from 'components/common/buttons/button';
-export * from 'components/common/buttons/outlinedButton';
-export * from 'components/common/buttons/textButton';
-export * from 'components/common/textfield/textfield';
-export * from 'components/common/layout';
-export * from 'components/common/authLayout';
-export * from 'components/common/navigation/navigation';
+export * from 'components/shared/logo';
+export * from 'components/shared/buttons/button';
+export * from 'components/shared/buttons/outlinedButton';
+export * from 'components/shared/buttons/textButton';
+export * from 'components/shared/textfield/textfield';
+export * from 'components/shared/layout';
+export * from 'components/shared/authLayout';
+export * from 'components/shared/navigation/navigation';
 
 // Desktop
 export * from 'components/header';
