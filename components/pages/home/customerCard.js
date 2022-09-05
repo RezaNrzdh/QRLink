@@ -1,5 +1,5 @@
 import { Icon } from 'constants/icon';
-import * as S from './card.styled';
+import * as S from './customerCard.styled';
 
 const Card = ({logo, desc, author}) => {
     return(

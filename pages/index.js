@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import {mainContext} from 'provider/mainContext';
 import axios from 'axios';
 
-const Desktop = dynamic(() => import('components/view/home/desktop'));
+const Desktop = dynamic(() => import('components/pages/home'));
 const Mobile  = dynamic(() => import('components/view/home/mobile'));
 
 const IndexPage = ({customers, articles}) => {

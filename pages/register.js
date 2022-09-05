@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import Axios from 'axios';
 import {mainContext} from 'provider/mainContext';
 
-const Desktop = dynamic(() => import('components/view/register/desktop'));
+const Desktop = dynamic(() => import('components/pages/register'));
 const Mobile  = dynamic(() => import('components/view/register/mobile'));
 
 const RegisterPage = () => {

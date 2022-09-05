@@ -1,4 +1,4 @@
-import * as S from './card.styled';
+import * as S from './articleCard.styled';
 
 const Card = ({title, image, summary, author}) => {
     return(

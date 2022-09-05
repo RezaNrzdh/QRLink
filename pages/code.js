@@ -2,7 +2,7 @@ import {useContext} from 'react';
 import dynamic from 'next/dynamic';
 import {mainContext} from 'provider/mainContext';
 
-const Desktop = dynamic(() => import('components/view/otpcode/desktop'));
+const Desktop = dynamic(() => import('components/pages/code'));
 const Mobile  = dynamic(() => import('components/view/otpcode/mobile'));
 
 const OTPCode = () => {
