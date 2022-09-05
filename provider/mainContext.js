@@ -1,4 +1,4 @@
-import { UserAgent } from 'utils/useragent';
+import { UserAgent } from 'lib/useragent';
 import {createContext, useEffect, useState} from 'react';
 
 export const mainContext = createContext();

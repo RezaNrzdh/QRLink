@@ -1,32 +1,28 @@
 import {Fragment} from "react";
 
-const ExamplePage = () => {
+const ExamplePage = (props) => {
     return (
         <Fragment>
-            <HeaderComponent />
+            <header>header</header>
             <section style={{ display: 'flex'}}>
-                <SideComponent />
-                <MainComponent />
+                <div>side</div>
+                <div>{props.d.name}</div>
             </section>
-            <FooterComponent />
+            <button>ADD NUMBER</button>
+            <footer>footer</footer>
         </Fragment>
     )
 }
 
-const HeaderComponent = () => {
-    return <header>Header</header>
-}
+export const getStaticProps = async () => {
+    const response = await fetch('http://localhost:3000/api/test');
+    const data = await response.json();
 
-const FooterComponent = () => {
-    return <footer>Footer</footer>
-}
-
-const SideComponent = () => {
-    return <dic>Side</dic>
-}
-
-const MainComponent = () => {
-    return <div>Main Section</div>
+    return {
+        props: {
+            d: data
+        }
+    }
 }
 
 export default ExamplePage;

@@ -26,14 +26,4 @@ export const getStaticProps  = async (context) => {
     }
 }
 
-const FeatureComponent = () => {}
-
-const HeroComponent = () => {}
-
-const SupportComponent = () => {}
-
-const ArticlesComponent = () => {}
-
-const CustomersComponent = () => {}
-
 export default IndexPage;

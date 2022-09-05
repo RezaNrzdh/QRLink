@@ -1,6 +1,6 @@
-import Connection from "utils/connection";
+import Connection from "lib/connection";
 import userModel from 'models/userModel';
-import OTPGenerator from 'utils/otp';
+import OTPGenerator from 'lib/otp';
 
 const RouteHandler = async (req, res) => {
     // Set Header

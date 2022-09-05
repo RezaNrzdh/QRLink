@@ -1,29 +1,16 @@
-import Connection from 'utils/connection';
+import Connection from 'lib/connection';
 import QRCode from 'qrcode';
 
 const RouteHandler = async (req, res) => {
 
     const {method} = req;
 
-    switch(method) {
-        case 'GET': 
-            GetAllProfile(req, res);
-            break;
-        case 'POST': 
-            CreateProfile(req, res);
-            break;
-    }
-
-
-    
-    const GetAllProfile = (req, res) => {
+    if(method === "GET"){
 
     }
-
-    const CreateProfile = (req, res) => {
+    else if(method === "POST"){
 
     }
-
 }
 
 export default RouteHandler;

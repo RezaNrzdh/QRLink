@@ -15,6 +15,7 @@
     "bcrypt": "^5.0.1",
     "cookies": "^0.8.0",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.9.1",
     "mongoose": "^6.3.6",
     "next": "^12.2.2",
     "nprogress": "^0.2.0",

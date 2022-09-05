@@ -1,33 +1,20 @@
-import Connection from 'utils/connection';
+import Connection from 'lib/connection';
 import QRCode from 'qrcode';
 
 const RouteHandler = async (req, res) => {
     const {method} = req;
 
-    switch(method) {
-        case 'GET': 
-            GetProfile(req, res);
-            break;
-        case 'PATCH': 
-            UpdateProfile(req, res);
-            break;     
-        case 'DELETE': 
-            DeleteProfile(req, res);
-            break;                   
+    if(method === "GET"){
+        //CODE
     }
-
-
-
-    const GetProfile = (req, res) => {
-
+    else if(method === "POST") {
+        //CODE
     }
-
-    const UpdateProfile = (req, res) => {
-
+    else if(method === "PATCH") {
+        //CODE
     }
-
-    const DeleteProfile = (req, res) => {
-
+    else if(method === "DELETE") {
+        //CODE
     }
 }
 
