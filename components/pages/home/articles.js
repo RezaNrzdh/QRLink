@@ -1,5 +1,5 @@
 import Container from 'hoc/container';
-import Card from './card';
+import Card from './articleCard';
 import * as S from './article.styled';
 
 const Articles = ({articles}) => {

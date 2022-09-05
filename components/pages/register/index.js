@@ -5,7 +5,7 @@ import {Icon} from 'constants/icon';
 import * as S from './index.styled';
 
 
-const Desktop = (props) => {
+const RegisterComponent = (props) => {
     return(
         <AuthLayout>
             <S.Container>
@@ -57,4 +57,4 @@ const Desktop = (props) => {
     );
 }
 
-export default Desktop;
+export default RegisterComponent;

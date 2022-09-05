@@ -1,25 +1,7 @@
-import {useContext} from 'react';
-import dynamic from 'next/dynamic';
-import {mainContext} from 'provider/mainContext';
+import CodeComponent from 'components/pages/code';
 
-const Desktop = dynamic(() => import('components/pages/code'));
-const Mobile  = dynamic(() => import('components/view/otpcode/mobile'));
-
-const OTPCode = () => {
-    
-    const{isMobile, mobileNumber, MobileNumberHandler} = useContext(mainContext);
-
-    return isMobile === true
-        ? 
-            <Mobile 
-                mobileNumber={mobileNumber} 
-                MobileNumberHandler={MobileNumberHandler}
-            />
-        : 
-            <Desktop 
-                mobileNumber={mobileNumber} 
-                MobileNumberHandler={MobileNumberHandler}
-            />
+const CodePage = () => {
+    return <CodeComponent />
 }
 
-export default OTPCode;
+export default CodePage;

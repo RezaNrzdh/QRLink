@@ -6,7 +6,7 @@ import {Button} from 'components';
 
 
 
-const Desktop = (props) => {
+const CodeComponent = (props) => {
 
     const router = useRouter();
     let NextInput = useRef([]);
@@ -71,4 +71,4 @@ const Desktop = (props) => {
     );
 }
 
-export default Desktop;
+export default CodeComponent;

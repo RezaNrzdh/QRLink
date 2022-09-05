@@ -1,17 +1,19 @@
-import {useContext} from 'react';
-import dynamic from 'next/dynamic';
-import {mainContext} from 'provider/mainContext';
 import axios from 'axios';
-
-const Desktop = dynamic(() => import('components/pages/home'));
-const Mobile  = dynamic(() => import('components/view/home/mobile'));
+import { Layout } from 'components';
+import Hero from 'components/pages/home/hero';
+import Features from 'components/pages/home/features';
+import Customers from 'components/pages/home/customers';
+import Articles from 'components/pages/home/articles';
 
 const IndexPage = ({customers, articles}) => {
-    const {isMobile} = useContext(mainContext);
-
-    return isMobile === true
-        ? <Mobile />
-        : <Desktop customers={customers.data} articles={articles.data} />
+    return(
+        <Layout>
+            <Hero />
+            <Features />
+            <Customers customers={customers.data} />
+            <Articles articles={articles.data} />
+        </Layout>
+    );
 }
 
 export const getStaticProps  = async (context) => {

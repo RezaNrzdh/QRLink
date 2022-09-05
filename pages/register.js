@@ -1,11 +1,8 @@
 import {useContext} from 'react';
 import {useRouter} from 'next/router';
-import dynamic from 'next/dynamic';
 import Axios from 'axios';
 import {mainContext} from 'provider/mainContext';
-
-const Desktop = dynamic(() => import('components/pages/register'));
-const Mobile  = dynamic(() => import('components/view/register/mobile'));
+import RegisterComponent from "components/pages/register"
 
 const RegisterPage = () => {
 
@@ -36,9 +33,9 @@ const RegisterPage = () => {
         }
     }
 
-    return isMobile === true
-        ? <Mobile click={onSubmitButtonHandler} />
-        : <Desktop click={onSubmitButtonHandler} />;
+    return (
+        <RegisterComponent />
+    )
 }
 
 export default RegisterPage;

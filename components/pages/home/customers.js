@@ -1,6 +1,6 @@
 import Container from "hoc/container";
 import * as S from './customer.styled';
-import Card from "./card";
+import Card from "./customerCard";
 
 const Customers = ({customers}) => {
     return(
