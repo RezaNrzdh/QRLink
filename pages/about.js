@@ -3,7 +3,7 @@ import {Layout} from 'components/index';
 import Container from 'hoc/container';
 import Link from 'next/link';
 
-import { OutlinedButton } from 'components/shared/buttons/outlinedButton';
+import { OutlinedButton } from 'components/ui/buttons/outlinedButton';
 
 const AboutPage = () => {
 

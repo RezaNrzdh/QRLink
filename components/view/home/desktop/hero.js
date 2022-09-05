@@ -1,4 +1,4 @@
-import { Button } from 'components/shared/buttons/button';
+import { Button } from 'components/ui/buttons/button';
 import { Icon } from 'constants/icon';
 import * as S from './hero.styled';
 

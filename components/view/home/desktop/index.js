@@ -1,4 +1,4 @@
-import { Layout } from "components/shared/layout";
+import { Layout } from "components/layout/layout";
 import Hero from './hero';
 import Features from "./features";
 import Customers from "./customers/customers";

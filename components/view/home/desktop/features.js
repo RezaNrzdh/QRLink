@@ -1,4 +1,4 @@
-import { Button } from 'components/shared/buttons/button';
+import { Button } from 'components/ui/buttons/button';
 import Container from 'hoc/container';
 import * as S from './features.styled';
 

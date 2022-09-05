@@ -1,15 +1,13 @@
-//Common
-export * from 'components/shared/logo';
-export * from 'components/shared/buttons/button';
-export * from 'components/shared/buttons/outlinedButton';
-export * from 'components/shared/buttons/textButton';
-export * from 'components/shared/textfield/textfield';
-export * from 'components/shared/layout';
-export * from 'components/shared/authLayout';
-export * from 'components/shared/navigation/navigation';
+//Layout
+export * from 'components/layout/layout';
+export * from 'components/layout/authLayout';
 
-// Desktop
-export * from 'components/header';
-export * from 'components/footer';
-
-//Mobile
+// UI
+export * from 'components/ui/header';
+export * from 'components/ui/footer';
+export * from 'components/ui/navigation/navigation';
+export * from 'components/ui/textfield/textfield';
+export * from 'components/ui/logo/logo';
+export * from 'components/ui/buttons/button';
+export * from 'components/ui/buttons/outlinedButton';
+export * from 'components/ui/buttons/textButton';

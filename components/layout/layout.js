@@ -1,7 +1,7 @@
 import {useContext} from 'react';
 import {mainContext} from 'provider/mainContext';
-import {DesktopHeader, MobileHeader} from 'components/header';
-import {DesktopFooter, MobileFooter} from 'components/footer';
+import {DesktopHeader, MobileHeader} from 'components/ui/header';
+import {DesktopFooter, MobileFooter} from 'components/ui/footer';
 
 export const Layout = (props) => {
 
