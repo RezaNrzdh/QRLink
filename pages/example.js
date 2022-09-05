@@ -1,11 +1,32 @@
-import { Button } from "components/buttons";
+import {Fragment} from "react";
 
-const Example = () => {
-    return(
-        <>
-        <Button basic={"orange"} click={()=> {console.log(1)}} size={"100px"}>Example</Button>
-        </>
-    );
+const ExamplePage = () => {
+    return (
+        <Fragment>
+            <HeaderComponent />
+            <section style={{ display: 'flex'}}>
+                <SideComponent />
+                <MainComponent />
+            </section>
+            <FooterComponent />
+        </Fragment>
+    )
 }
 
-export default Example;
+const HeaderComponent = () => {
+    return <header>Header</header>
+}
+
+const FooterComponent = () => {
+    return <footer>Footer</footer>
+}
+
+const SideComponent = () => {
+    return <dic>Side</dic>
+}
+
+const MainComponent = () => {
+    return <div>Main Section</div>
+}
+
+export default ExamplePage;
