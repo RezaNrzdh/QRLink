@@ -3,6 +3,7 @@ import {useRouter} from 'next/router';
 import Axios from 'axios';
 import {mainContext} from 'provider/mainContext';
 import RegisterComponent from "components/pages/register"
+import { AuthLayout } from 'components';
 
 const RegisterPage = () => {
 
@@ -34,8 +35,10 @@ const RegisterPage = () => {
     }
 
     return (
-        <RegisterComponent />
-    )
+        <AuthLayout>
+            <RegisterComponent />
+        </AuthLayout>
+    );
 }
 
 export default RegisterPage;
