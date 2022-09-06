@@ -36,9 +36,9 @@ const RegisterPage = () => {
 
     return (
         <AuthLayout>
-            <RegisterComponent />
+            <RegisterComponent click={onSubmitButtonHandler} />
         </AuthLayout>
-    );
+    )
 }
 
 export default RegisterPage;

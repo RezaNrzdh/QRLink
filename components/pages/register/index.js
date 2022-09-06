@@ -26,13 +26,13 @@ const RegisterComponent = (props) => {
                             id='checkbox' />
                         <label>شرایط و قوانین سایت هفده را می‌پذیرم.</label>
                     </S.ForgetPassword>
-                    <Button
+                    <button
                         as='button'
                         variant='contained'
                         colors='primary'
                         type='submit'>
                             ثبت نام در سایت
-                    </Button>
+                    </button>
                     <S.DoNotRegisterYet>
                         <label>قبلا عضو شدی؟</label>
                         <Link href='/login'><a className='link'>همین حالا وارد شو</a></Link>
