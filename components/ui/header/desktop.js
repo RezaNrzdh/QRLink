@@ -1,9 +1,10 @@
 import Container from 'hoc/container';
 import {Navigation, Logo} from 'components/index';
-import { Button, TextButton } from 'components/index';
+import { TextButton } from 'components/index';
 import styled from 'styled-components';
 import {Elevation} from 'constants/elevation';
 import { Color } from 'constants/color';
+import LinkButton from '../buttons/linkButton';
 
 export const DesktopHeader = () => {
     return(
@@ -13,7 +14,8 @@ export const DesktopHeader = () => {
                 <Navigation />
                 <Auth>
                     <TextButton href='/login' colors='dark'>ورود</TextButton>
-                    <Button href='/register' colors='primary'>عضویت</Button>
+                    <LinkButton href='/register' colors='primary'>عضویت</LinkButton>
+                    
                 </Auth>
             </Container>
         </Header>

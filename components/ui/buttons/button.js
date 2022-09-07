@@ -12,17 +12,15 @@ export const Button = ({
     ...props
 }) => {
     return(
-        <Link href={`${href}`}>
-            <S.Container 
-                as={as} 
-                onClick={click} 
-                fullWidth={fullWidth}
-                btnSize={size}
-                colors={colors} 
-                radius={radius}
-            >
-                { props.children }
-            </S.Container>  
-        </Link>
+        <S.Container 
+            as={as} 
+            onClick={click} 
+            fullWidth={fullWidth}
+            btnSize={size}
+            colors={colors} 
+            radius={radius}
+        >
+            { props.children }
+        </S.Container>  
     );
 }

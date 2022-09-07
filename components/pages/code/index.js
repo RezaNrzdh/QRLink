@@ -1,7 +1,6 @@
 import react, { useEffect, useRef } from 'react';
 import {useRouter} from 'next/router';
 import * as S from './index.styled';
-import {AuthLayout} from 'components/index';
 import {Button} from 'components';
 
 
@@ -17,7 +16,7 @@ const CodeComponent = (props) => {
         }
     })
 
-    const FocusHanlder = (event) => {
+    const FocusHandlder = (event) => {
         if(event.target.value !== ''){
             if(event.target.name < 5){
                 NextInput.current[parseInt(event.target.name) + 1].current.focus();
@@ -31,23 +30,24 @@ const CodeComponent = (props) => {
     }
 
     return(
-        <AuthLayout>
-            <S.Container>
-                <S.Title>
-                    <h1>احراز هویت</h1>
-                    <label>کد تایید ارسال شده به شماره {props.mobileNumber} را وارد کنید.</label>               
-                </S.Title>
+        <S.Container>
+            <S.Title>
+                <h1>احراز هویت</h1>
+                <label>کد تایید ارسال شده به شماره {props.mobileNumber} را وارد کنید.</label>               
+            </S.Title>
+            <form onSubmit={props.click}>
                 <S.Otp>
                     {
                         [0,1,2,3,4,5].map((index) => {
                             return <input
                                 name={index}
+                                id={`num${index}`}
                                 key={index}
                                 type={'tel'}
                                 maxLength={1}
                                 min={0}
                                 max={9}
-                                onChange={FocusHanlder}
+                                onChange={FocusHandlder}
                                 autoComplete='off'
                                 ref={NextInput.current[index] = react.createRef()}
                                 />
@@ -66,8 +66,8 @@ const CodeComponent = (props) => {
                     <a className='link'>ارسال مجدد کد یکبار مصرف</a>
                     <label></label>
                 </S.Resend>
-            </S.Container>
-        </AuthLayout>
+            </form>
+        </S.Container>
     );
 }
 
