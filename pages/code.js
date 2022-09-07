@@ -17,7 +17,8 @@ const CodePage = () => {
         }
 
         await Axios.post("/api/auth/code",{
-            otpNumber: parseInt(digit)
+            mobile: mobileNumber,
+            otp: parseInt(digit)
         });
     } 
 

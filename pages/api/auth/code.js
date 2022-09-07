@@ -6,12 +6,12 @@ const Handler = async(req, res) => {
 
     await Connection();
 
-    
+    const getOTP = await userModel.findOne({ mobile: body.mobile }).select('mobile otp otpExpired');
 
     res.status(200).json({
-        otp: body.otpNumber,
+        otp: body.otp,
         status: true,
-        type: 'CODE'
+        body: getOTP
     });
 }
 
