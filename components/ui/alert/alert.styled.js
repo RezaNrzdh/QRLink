@@ -30,4 +30,15 @@ export const Alert = styled.div`
     background-color: ${Type};
     color: ${Color.text.main};
     ${Typography.Caption}
+    label{
+        margin-left: 16px;
+    }
+    a{
+        display: flex;
+        position: relative;
+        left:0;
+        width: 24px;
+        height: 24px;
+        margin-right: auto;
+    }
 `;
