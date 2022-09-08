@@ -9,6 +9,7 @@ const CodePage = () => {
     const {mobileNumber, MobileNumberHandler} = useContext(mainContext);
     const [alertMessage, setAlertMessage] = useState({
         visible: false,
+        type: "info",
         msg: null
     });
 
@@ -21,15 +22,21 @@ const CodePage = () => {
             digit += event.target[i].value;
         }
 
-        await Axios.post("/api/auth/code",{
+        const result = await Axios.post("/api/auth/code",{
             mobile: mobileNumber,
             otp: parseInt(digit)
+        });
+
+        setAlertMessage({
+            visible: true,
+            type: result.data.status,
+            msg: result.data.msg
         });
     } 
 
     return (
         <AuthLayout>
-            <Alert visible={alertMessage.visible} type="success" msg={alertMessage.msg} />
+            <Alert visible={alertMessage.visible} type={alertMessage.type} msg={alertMessage.msg} />
             <CodeComponent
                 click={onCheckNumber}
                 msg={setAlertMessage}

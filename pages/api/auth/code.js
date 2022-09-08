@@ -14,18 +14,21 @@ const Handler = async(req, res) => {
         if(getOTP.otp === body.otp){
             await userModel.updateOne({mobile: body.mobile},{registeredDone: true});
             res.status(200).json({
-                msg: "Conguratulaion, Your Register has been done"
+                msg: "تبریک، ثبت نام شما با موفقیت انجام شد.",
+                status: "success"
             });
         }
         else{
             res.status(200).json({
-                msg: "Your OTP code is wrong, please try again."
+                msg: "کد یکبار مصرف شما اشتباه است، لطفا دوباره تلاش کنید",
+                status: "danger"
             });
         }
     }
     else{
         res.status(200).json({
-            msg: "I'm sorry, your OTP has been expired! please try again."
+            msg: "زمان اعتبار رمز یکبار مصرف شما به اتمام رسیده است، لطفا دوباره تلاش کنید.",
+            status: "info"
         });
     }
 }
