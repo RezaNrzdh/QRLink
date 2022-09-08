@@ -8,18 +8,26 @@ const Handler = async(req, res) => {
 
     const getOTP = await userModel.findOne({ mobile: body.mobile }).select('mobile otp otpExpired');
 
-    if(getOTP.otp === body.otp){
-        console.log('YES')
+    const CurrentTime = Date.now();
+
+    if(CurrentTime < getOTP.otpExpired){
+        if(getOTP.otp === body.otp){
+            await userModel.updateOne({mobile: body.mobile},{registeredDone: true});
+            res.status(200).json({
+                msg: "Conguratulaion, Your Register has been done"
+            });
+        }
+        else{
+            res.status(200).json({
+                msg: "Your OTP code is wrong, please try again."
+            });
+        }
     }
     else{
-        console.log('NO')
+        res.status(200).json({
+            msg: "I'm sorry, your OTP has been expired! please try again."
+        });
     }
-
-    res.status(200).json({
-        otp: body.otp,
-        status: true,
-        body: getOTP
-    });
 }
 
 export default Handler;
