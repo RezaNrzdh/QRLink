@@ -1,11 +1,16 @@
-import {useContext} from 'react';
+import {useContext, useState} from 'react';
 import {mainContext} from 'provider/mainContext';
-import CodeComponent from 'components/pages/code';
 import { AuthLayout } from 'components';
+import Alert from 'components/ui/alert/alert';
+import CodeComponent from 'components/pages/code';
 import Axios from 'axios';
 
 const CodePage = () => {
-    const{mobileNumber, MobileNumberHandler} = useContext(mainContext);
+    const {mobileNumber, MobileNumberHandler} = useContext(mainContext);
+    const [alertMessage, setAlertMessage] = useState({
+        visible: false,
+        msg: null
+    });
 
     const onCheckNumber = async (event) => {
         event.preventDefault();
@@ -24,8 +29,10 @@ const CodePage = () => {
 
     return (
         <AuthLayout>
+            <Alert visible={alertMessage.visible} type="success" msg={alertMessage.msg} />
             <CodeComponent
-                click={onCheckNumber} 
+                click={onCheckNumber}
+                msg={setAlertMessage}
                 mobileNumber={mobileNumber} 
                 MobileNumberHandler={MobileNumberHandler} />
         </AuthLayout>
