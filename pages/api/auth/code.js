@@ -8,7 +8,7 @@ const Handler = async(req, res) => {
 
     const getOTP = await userModel.findOne({ mobile: body.mobile }).select('mobile otp otpExpired');
 
-    if(getOTP === body.top){
+    if(getOTP.otp === body.otp){
         console.log('YES')
     }
     else{
