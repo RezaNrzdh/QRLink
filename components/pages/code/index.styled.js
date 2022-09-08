@@ -33,7 +33,7 @@ export const Otp = styled.div`
     display: flex;
     direction: ltr;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 32px;
     height: 46px;
     input{
         width: 42px;

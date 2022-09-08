@@ -32,11 +32,22 @@ const CodePage = () => {
             type: result.data.status,
             msg: result.data.msg
         });
-    } 
+    }
+
+    const CloseAlertBox = () => {
+        setAlertMessage({
+            ...alertMessage,
+            visible: false
+        });
+    }
 
     return (
         <AuthLayout>
-            <Alert visible={alertMessage.visible} type={alertMessage.type} msg={alertMessage.msg} />
+            <Alert 
+                click={CloseAlertBox}
+                visible={alertMessage.visible} 
+                type={alertMessage.type} 
+                msg={alertMessage.msg} />
             <CodeComponent
                 click={onCheckNumber}
                 msg={setAlertMessage}

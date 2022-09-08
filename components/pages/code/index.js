@@ -54,7 +54,6 @@ const CodeComponent = (props) => {
                         })
                     }
                 </S.Otp>
-                <S.Error>کد وارد شده اشتباه است، لطفا مجددا تلاش کنید.</S.Error>
                 <Button
                     as='button'
                     variant='contained'
