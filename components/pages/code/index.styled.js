@@ -63,7 +63,13 @@ export const Resend = styled.div`
     display: flex;
     margin-top: 24px;
     a{
+        color: ${Color.info.main};
+    }
+    a, label{
         ${Typography.Caption};
+    }
+    label{
+        margin-right: 4px;
         color: ${Color.text.light};
     }
 `;

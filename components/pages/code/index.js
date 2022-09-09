@@ -1,4 +1,4 @@
-import react, { useEffect, useRef } from 'react';
+import react, { useEffect, useRef, useState } from 'react';
 import {useRouter} from 'next/router';
 import * as S from './index.styled';
 import {Button} from 'components';
@@ -6,15 +6,25 @@ import {Button} from 'components';
 
 
 const CodeComponent = (props) => {
-
     const router = useRouter();
     let NextInput = useRef([]);
+    const [countdown, setCountdown] = useState(120);
 
     useEffect(() => {
         if(props.mobileNumber === 0){
             router.push('/register');
         }
-    })
+    });
+
+    useEffect(() => {
+        if (countdown <= 0 ) return;
+
+        const interval = setInterval(() => {
+            setCountdown(countdown-1);
+        },1000);
+        
+        return () => clearInterval(interval);
+    },[countdown])
 
     const FocusHandlder = (event) => {
         if(event.target.value !== ''){
@@ -62,8 +72,18 @@ const CodeComponent = (props) => {
                         بررسی کد تایید
                 </Button>
                 <S.Resend>
-                    <a className='link'>ارسال مجدد کد یکبار مصرف</a>
-                    <label></label>
+                    {
+                        countdown > 0
+                            ?
+                            <>
+                                <label>ارسال مجدد کد یکبار مصرف</label>
+                                <label>({countdown} ثانیه)</label>                        
+                            </>
+                            :
+                            <>
+                                <a className='link'>ارسال مجدد کد یکبار مصرف</a>                        
+                            </>                            
+                    }
                 </S.Resend>
             </form>
         </S.Container>

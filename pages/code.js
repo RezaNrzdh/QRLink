@@ -15,7 +15,7 @@ const CodePage = () => {
 
     const onCheckNumber = async (event) => {
         event.preventDefault();
-;
+        
         let digit = '';
 
         for(let i=0; i < event.target.length - 1; i++){
