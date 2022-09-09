@@ -16,7 +16,7 @@ const RegisterPage = () => {
         const mobile   = event.target.phone.value;
         const checked  = event.target.checkbox.checked;
 
-        if(phone !== null && checked === true){            
+        if(mobile && checked){
             const createUser = await Axios.post('/api/auth/register',{ 
                 mobile: mobile
             });
@@ -29,8 +29,8 @@ const RegisterPage = () => {
                 router.push('/login');
             }
         }
-        else {
-            console.log('please fill mobile number and checked condition and rules')
+        else{
+            console.log("please fill mobile number and checked condition and rules");
         }
     }
 
