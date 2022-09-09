@@ -30,6 +30,13 @@ const LoginComponent = (props) => {
                         <label>هنوز عضو نشدی؟</label>
                         <Link href='/register'><a className='link'>همین حالا عضو شو</a></Link>
                     </S.DoNotRegisterYet>
+                    <S.HLine />
+                    <Link href='/'>
+                        <a className='return'>
+                            بازگشت به خانه
+                            <Icon icon='icon-arrow-left' size={24}/>
+                        </a>
+                    </Link>
                 </form> 
             </S.FormWrapper>                   
         </S.Container>  

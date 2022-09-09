@@ -16,6 +16,15 @@ export const FormWrapper = styled.section`
     box-sizing: border-box;
     border-radius: 24px;
     background-color: ${Color.background.light};
+    .return{
+        display: flex;
+        margin-top: 24px;
+        ${Typography.Body2};
+        color: ${Color.text.main};
+        svg{
+            margin-right: 8px;
+        }
+    }
 `;
 
 export const Title = styled.div`
@@ -50,4 +59,9 @@ export const DoNotRegisterYet = styled.div`
         color: ${Color.text.light};
         margin-left: 4px;
     }
+`;
+
+export const HLine = styled.div`
+    margin-top: 24px;
+    border-top: 1px solid ${Color.stroke.light};
 `;
