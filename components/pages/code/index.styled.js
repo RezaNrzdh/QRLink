@@ -69,7 +69,9 @@ export const Resend = styled.div`
         ${Typography.Caption};
     }
     label{
-        margin-right: 4px;
         color: ${Color.text.light};
+    }
+    .indent{
+        margin-right: 4px;
     }
 `;

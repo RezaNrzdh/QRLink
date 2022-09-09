@@ -77,7 +77,7 @@ const CodeComponent = (props) => {
                             ?
                             <>
                                 <label>ارسال مجدد کد یکبار مصرف</label>
-                                <label>({countdown} ثانیه)</label>                        
+                                <label className='indent'>({countdown} ثانیه)</label>                        
                             </>
                             :
                             <>
