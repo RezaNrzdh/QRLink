@@ -23,7 +23,6 @@ const RouteHandler = async (req, res) => {
     if(!checkUserExist){
         const createUser = await userModel.create(userBody);
         return res.status(200).json({
-            success: true,
             status: "created",
             mobile: createUser.mobile
         });
@@ -31,27 +30,25 @@ const RouteHandler = async (req, res) => {
 
     if(checkUserExist.attempt > 4){
         return res.status(200).json({
-            success: false,
-            status: "limited",
-            err: 'You have attempts to register in more then 5 times.'
+            status: "limited"
         })
     }
 
     if(!checkUserExist.registeredDone){
-        await userModel.where({ mobile: body.mobile }).update({ otp: otp, otpExpired: otpExpired, $inc: { 'attempt': 1 } });
+        await userModel.updateOne({ mobile: body.mobile }, { otp: otp, otpExpired: otpExpired, $inc: { 'attempt': 1 } });
         return res.status(200).json({
-            success: true,
+            status: "attempt",
+            mobile: checkUserExist.mobile
+        });
+    }
+
+    if(checkUserExist.registeredDone){
+        return res.status(200).json({
             status: "done",
             mobile: checkUserExist.mobile
         });
     }
-    else{
-        return res.status(200).json({
-            success: false,
-            status: "success",
-            err: 'Mobile registered successfuly!'
-        })
-    }
+
 }
 
 export default RouteHandler;
