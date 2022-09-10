@@ -50,7 +50,7 @@ const CodePage = () => {
     // Resend OTP Request
     //-------------------
     const ResendOTPRequest = async() => {
-        const resend = await Axios.post('/api/auth/register',{ 
+        await Axios.post('/api/auth/register',{ 
             mobile: mobileNumber
         });
     }
