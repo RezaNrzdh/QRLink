@@ -10,12 +10,17 @@ const CodeComponent = (props) => {
     let NextInput = useRef([]);
     const [countdown, setCountdown] = useState(120);
 
+    // If mobile number doesn't exist, redirect to the Register page.
+    //--------------------------------------------------------------
     useEffect(() => {
         if(props.mobileNumber === 0){
             router.push('/register');
         }
     });
 
+
+    // Countdown used for OTP
+    //----------------------
     useEffect(() => {
         if (countdown <= 0 ) return;
 
@@ -26,6 +31,9 @@ const CodeComponent = (props) => {
         return () => clearInterval(interval);
     },[countdown])
 
+
+    // Auto Focus on Inputs
+    //---------------------
     const FocusHandlder = (event) => {
         if(event.target.value !== ''){
             if(event.target.name < 5){
@@ -37,6 +45,14 @@ const CodeComponent = (props) => {
                 NextInput.current[parseInt(event.target.name) - 1].current.focus();
             }
         }
+    }
+
+
+    // Resend OTP request
+    //-------------------
+    const ResetOTP = () => {
+        setCountdown(120);
+        props.resendOTP();
     }
 
     return(
@@ -81,7 +97,7 @@ const CodeComponent = (props) => {
                             </>
                             :
                             <>
-                                <a className='link'>ارسال مجدد کد یکبار مصرف</a>                        
+                                <a onClick={ResetOTP} className='link'>ارسال مجدد کد یکبار مصرف</a>                        
                             </>                            
                     }
                 </S.Resend>

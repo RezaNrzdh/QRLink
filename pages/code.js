@@ -12,11 +12,14 @@ const CodePage = () => {
         type: "info",
         msg: null
     });
+    let digit = '';
 
+
+    // Collect all 6 inputs, merge them and then send the request to the API
+    // and then show alert box.
+    //----------------------------------------------------------------------
     const onCheckNumber = async (event) => {
         event.preventDefault();
-        
-        let digit = '';
 
         for(let i=0; i < event.target.length - 1; i++){
             digit += event.target[i].value;
@@ -34,10 +37,21 @@ const CodePage = () => {
         });
     }
 
+
+    // Close Alert Box
+    //----------------
     const CloseAlertBox = () => {
         setAlertMessage({
             ...alertMessage,
             visible: false
+        });
+    }
+
+    // Resend OTP Request
+    //-------------------
+    const ResendOTPRequest = async() => {
+        const resend = await Axios.post('/api/auth/register',{ 
+            mobile: mobileNumber
         });
     }
 
@@ -50,6 +64,7 @@ const CodePage = () => {
                 msg={alertMessage.msg} />
             <CodeComponent
                 click={onCheckNumber}
+                resendOTP={ResendOTPRequest}
                 msg={setAlertMessage}
                 mobileNumber={mobileNumber} 
                 MobileNumberHandler={MobileNumberHandler} />
