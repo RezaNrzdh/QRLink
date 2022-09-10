@@ -16,7 +16,7 @@ const IndexPage = ({customers, articles}) => {
     );
 }
 
-export const getServerSideProps  = async (context) => {
+export const getStaticProps  = async () => {
     const customers = await axios.get(`${process.env.HOSTNAME}/api/customer`);
     const articles = await axios.get(`${process.env.HOSTNAME}/api/article?limit=4`);
     
