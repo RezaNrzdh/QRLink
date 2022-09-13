@@ -2,7 +2,8 @@ const Color = {
     primary: {
         main: '#FFD05B',
         dark: '#F39D6C',
-        light: '#FFEBB9'
+        light: '#FFEBB9',
+        lighter: '#FFFAEE'
     },
     secondary: {
         main: '',
@@ -12,6 +13,7 @@ const Color = {
     text: {
         main: '#23425f',
         light: '#767676',
+        lighter: '#999999',
         contrast: '#ffffff'
     },
     background: {
@@ -50,9 +52,10 @@ const Color = {
         light: '#9ED6FF'
     },
     icon: {
-        main: '',
-        dark: '',
-        light: ''
+        main: '#999999',
+        dark: '#23425F',
+        light: '',
+        contrast: '#ffffff'
     }
 }
 
