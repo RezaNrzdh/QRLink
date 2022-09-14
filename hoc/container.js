@@ -7,6 +7,7 @@ const Container = (props) => {
             between = { props.between }
             center = { props.center }
             middle = { props.middle }
+            notheight = {props.notheight}
         >
             {props.children}
         </S.Wrapper>

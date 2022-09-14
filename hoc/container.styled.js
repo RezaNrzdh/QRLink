@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     align-items: ${ props => props.middle ? 'center' : null };
     position: relative;
     width: 1280px;
-    height: inherit;
+    height: ${ props => props.notheight ? null : 'inherit' };
     margin-left: auto;
     margin-right: auto;
 

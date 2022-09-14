@@ -6,7 +6,7 @@ import Container from "hoc/container";
 const Dashboard = () => {
     return(
         <Layout>
-            <Container>
+            <Container notheight>
                 <SideComponent />
                 <BodyComponent />
             </Container>
