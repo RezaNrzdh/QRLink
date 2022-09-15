@@ -8,7 +8,7 @@ const ModuleComponent = () => {
         {icon: "icon-phone", title: "تلفن"},
         {icon: "icon-email", title: "ایمیل"},
         {icon: "icon-social", title: "شبکه‌های اجتماعی"},
-        {icon: "icon-messenger", title: "پیام رسان‌ها"},
+        {icon: "icon-message", title: "پیام رسان‌ها"},
         {icon: "icon-location", title: "آدرس"}
     ];
     const proModule = [

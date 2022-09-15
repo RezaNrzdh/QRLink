@@ -40,7 +40,7 @@ const Colors = ({colors}) => {
     }
 }
 
-export const Container = styled.a`
+export const Container = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
